@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contacta con GamerCharm – estamos aquí para ayudarte." />
+  <title>Contacto – GamerCharm</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="Fotos/GamerCharms.png" alt="GamerCharm Logo" class="nav-logo-img" />
+        <span class="nav-logo-text">GamerCharm</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="quienes-somos.html" class="nav-link">Quiénes Somos</a></li>
+        <li><a href="propuesta-valor.html" class="nav-link">Propuesta de Valor</a></li>
+        <li class="nav-dropdown">
+          <a href="productos.html" class="nav-link nav-link-dropdown">Productos <span class="arrow">▾</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="productos/pokemon.html">Pokémon</a></li>
+            <li><a href="productos/overwatch.html">Overwatch</a></li>
+            <li><a href="productos/counter-strike.html">Counter-Strike</a></li>
+            <li><a href="productos/fifa.html">FIFA</a></li>
+            <li><a href="productos/warhammer.html">Warhammer</a></li>
+            <li><a href="productos/otros.html">Otros</a></li>
+          </ul>
+        </li>
+        <li><a href="forma-juridica.html" class="nav-link">Forma Jurídica</a></li>
+        <li><a href="inversion.html" class="nav-link">Inversión y Financiación</a></li>
+        <li><a href="contacto.html" class="nav-link nav-link-cta">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="breadcrumb"><a href="index.html">Inicio</a><span>›</span>Contacto</div>
+
+  <section class="page-hero">
+    <div class="section-container">
+      <span class="section-tag">Habla con nosotros</span>
+      <h1>Contacto</h1>
+      <p>¿Tienes alguna pregunta, pedido especial o propuesta? Escríbenos.</p>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="section-container">
+      <div class="contact-grid">
+
+        <!-- Formulario -->
+        <div class="content-block">
+          <h2 style="margin-bottom:1.5rem;">✉️ Envíanos un mensaje</h2>
+          <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)">
+            <div class="two-col" style="gap:1rem;">
+              <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+              </div>
+              <div class="form-group">
+                <label for="apellido">Apellido</label>
+                <input type="text" id="apellido" name="apellido" placeholder="Tu apellido" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required />
+            </div>
+            <div class="form-group">
+              <label for="asunto">Asunto</label>
+              <input type="text" id="asunto" name="asunto" placeholder="¿En qué podemos ayudarte?" />
+            </div>
+            <div class="form-group">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos tu consulta, pedido especial o lo que necesites..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" id="submitBtn" style="width:100%;justify-content:center;">
+              Enviar Mensaje 🚀
+            </button>
+            <div id="formSuccess" style="display:none;text-align:center;padding:1rem;background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.4);border-radius:8px;color:#10b981;">
+              ✅ ¡Mensaje enviado! Te responderemos en menos de 24 h.
+            </div>
+          </form>
+        </div>
+
+        <!-- Info de contacto -->
+        <div class="contact-info">
+          <div class="contact-item">
+            <span class="contact-icon">📧</span>
+            <div>
+              <h3>Email</h3>
+              <p>hola@gamercharm.es</p>
+              <p style="font-size:0.8rem;margin-top:0.25rem;">Respondemos en menos de 24 h laborables</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📱</span>
+            <div>
+              <h3>Instagram</h3>
+              <p>@gamercharm.es</p>
+              <p style="font-size:0.8rem;margin-top:0.25rem;">Síguenos para novedades y sorteos</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">🎵</span>
+            <div>
+              <h3>TikTok</h3>
+              <p>@gamercharm</p>
+              <p style="font-size:0.8rem;margin-top:0.25rem;">Proceso de fabricación y unboxings</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📍</span>
+            <div>
+              <h3>Ubicación</h3>
+              <p>España</p>
+              <p style="font-size:0.8rem;margin-top:0.25rem;">Envíos a toda España y Europa</p>
+            </div>
+          </div>
+          <div class="contact-item" style="background:linear-gradient(135deg,rgba(124,58,237,0.1),rgba(6,182,212,0.05));border-color:rgba(124,58,237,0.3);">
+            <span class="contact-icon">⏰</span>
+            <div>
+              <h3>Horario de atención</h3>
+              <p>Lunes a Viernes · 10:00 – 20:00</p>
+              <p style="font-size:0.8rem;margin-top:0.25rem;">Fines de semana respondemos el lunes</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <img src="Fotos/GamerCharms.png" alt="GamerCharm" class="footer-logo" />
+        <p>© 2025 GamerCharm. Todos los derechos reservados.</p>
+      </div>
+      <div class="footer-links">
+        <a href="quienes-somos.html">Quiénes Somos</a>
+        <a href="propuesta-valor.html">Propuesta de Valor</a>
+        <a href="productos.html">Productos</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      document.getElementById('submitBtn').textContent = 'Enviando...';
+      setTimeout(() => {
+        document.getElementById('contactForm').reset();
+        document.getElementById('submitBtn').textContent = 'Enviar Mensaje 🚀';
+        document.getElementById('formSuccess').style.display = 'block';
+      }, 1000);
+    }
+  </script>
+</body>
+</html>
