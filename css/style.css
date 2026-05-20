@@ -1534,6 +1534,140 @@ h1, h2, h3, h4, .font-heading {
   color: var(--accent-cyan);
   text-shadow: var(--cyan-glow);
 }
+/* ════════════════════════════════
+   3D CARD FLIP & FLIP ARROWS STYLES
+   ════════════════════════════════ */
+.balance-3d-scene-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: 2.5rem;
+}
+
+.balance-3d-scene {
+  perspective: 1500px;
+  position: relative;
+  min-height: 570px; /* Consistently sized for identical front/back height */
+  width: 100%;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.85s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Flipped class triggers the 3D rotation */
+.balance-3d-scene-container.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  margin: 0 !important;
+  box-sizing: border-box;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+/* Premium Floating Flip Arrows */
+.flip-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(6, 7, 12, 0.85);
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  color: var(--accent-cyan);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 0 12px rgba(0, 240, 255, 0.15);
+  z-index: 25;
+}
+
+.flip-arrow:hover {
+  background: var(--accent-cyan);
+  color: #000;
+  border-color: var(--accent-cyan);
+  box-shadow: var(--cyan-glow), 0 0 20px rgba(0, 240, 255, 0.4);
+  transform: translateY(-50%) scale(1.15);
+}
+
+.flip-arrow:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.flip-arrow.prev-arrow {
+  left: -24px;
+  border-color: rgba(188, 60, 252, 0.3);
+  color: var(--accent-purple);
+  box-shadow: 0 0 12px rgba(188, 60, 252, 0.15);
+}
+
+.flip-arrow.prev-arrow:hover {
+  background: var(--accent-purple);
+  color: #000;
+  border-color: var(--accent-purple);
+  box-shadow: var(--purple-glow), 0 0 20px rgba(188, 60, 252, 0.4);
+  transform: translateY(-50%) scale(1.15);
+}
+
+.flip-arrow.next-arrow {
+  right: -24px;
+}
+
+.arrow-icon {
+  font-size: 1.25rem;
+  line-height: 1;
+  font-weight: bold;
+}
+
+/* Touch friendly mobile adjustments */
+@media (max-width: 1200px) {
+  .flip-arrow.prev-arrow {
+    left: -12px;
+  }
+  .flip-arrow.next-arrow {
+    right: -12px;
+  }
+}
+
+@media (max-width: 992px) {
+  .balance-3d-scene {
+    min-height: 1040px; /* To prevent overflow when two columns collapse into one on tablet */
+  }
+}
+
+@media (max-width: 768px) {
+  .flip-arrow {
+    width: 40px;
+    height: 40px;
+  }
+  .flip-arrow.prev-arrow {
+    left: -8px;
+  }
+  .flip-arrow.next-arrow {
+    right: -8px;
+  }
+  .balance-3d-scene {
+    min-height: 1070px;
+  }
+}
 
 /* Financial Visualizations: Canvas Panels */
 .charts-grid {

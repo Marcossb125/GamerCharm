@@ -450,7 +450,7 @@ function handleStlFile(file, zone, textElement) {
     addToCart(
       'stl-custom-' + Date.now(),
       `Llavero Custom STL`,
-      19.99,
+      5.00,
       'Fotos/Productos/logo.png',
       true,
       file.name
@@ -488,6 +488,28 @@ function initFinancialDashboard() {
           }
         }
       });
+    });
+  }
+
+  // 3D Card Flip logic for Balance and Income Statement (P&L)
+  const btnPrev = document.getElementById('btnFlipPrev');
+  const btnNext = document.getElementById('btnFlipNext');
+  const cardContainer = document.querySelector('.balance-3d-scene-container');
+  const flipCard = document.getElementById('balanceFlipCard');
+
+  if (cardContainer && flipCard) {
+    const performFlip = () => {
+      cardContainer.classList.toggle('flipped');
+    };
+
+    if (btnPrev) btnPrev.addEventListener('click', performFlip);
+    if (btnNext) btnNext.addEventListener('click', performFlip);
+    
+    // Tactile clicking on the card itself (excluding tables/links/interactive parts)
+    flipCard.addEventListener('click', (e) => {
+      if (!e.target.closest('a') && !e.target.closest('button') && !e.target.closest('.table-wrap')) {
+        performFlip();
+      }
     });
   }
 
@@ -550,8 +572,8 @@ function drawFinancialCharts() {
     ctx.stroke();
 
     // Data
-    const data = [3500, 3500]; // Activo vs Pasivo+PN
-    const maxVal = 4000;
+    const data = [4993, 4993]; // Activo vs Pasivo+PN (including PyG)
+    const maxVal = 6000;
     const labels = ['ACTIVO TOTAL', 'PASIVO + PN'];
     const colors = [
       { start: '#00f0ff', end: '#06b6d4', glow: 'rgba(0,240,255,0.35)' }, // Cyan
