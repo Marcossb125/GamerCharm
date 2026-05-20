@@ -65,7 +65,7 @@
 
       <!-- Interactive Dashboard Tabs -->
       <div class="tab-buttons-container" style="justify-content: center; margin-bottom: 2.5rem;">
-        <button class="tab-btn active" data-target="balance-tab">📊 Balance & Financiación</button>
+        <button class="tab-btn active" data-target="balance-tab">📊 Balance</button>
         <button class="tab-btn" data-target="viabilidad-tab">📈 Viabilidad & Gráficos</button>
       </div>
 
@@ -91,127 +91,69 @@
           </div>
         </div>
 
-        <!-- Contenedor 3D del Balance y Cuenta de Resultados -->
-        <div class="balance-3d-scene-container">
-          
-          <!-- Flecha Izquierda -->
-          <button class="flip-arrow prev-arrow" id="btnFlipPrev" aria-label="Ver Balance de Situación">
-            <span class="arrow-icon">◀</span>
-          </button>
+        <!-- Balance estático -->
+        <div class="content-block" style="margin-bottom: 2rem;">
+          <h2 style="font-family:'Orbitron'; text-align:center; margin-bottom:2rem; color:var(--text-primary);">📊 Balance (Estimación de Apertura)</h2>
+          <div class="two-col" style="gap:2.5rem;">
 
-          <!-- Escena 3D del Card Flip -->
-          <div class="balance-3d-scene">
-            <div class="flip-card-inner" id="balanceFlipCard">
-              
-              <!-- CARA FRONTAL: BALANCE DE SITUACIÓN -->
-              <div class="flip-card-front content-block">
-                <h2 style="font-family:'Orbitron'; text-align:center; margin-bottom:2rem; color:var(--text-primary);">📊 Balance de Situación (Año 1)</h2>
-                <div class="two-col" style="gap:2.5rem;">
-
-                  <!-- ACTIVO -->
-                  <div>
-                    <h3 style="color:var(--accent-cyan); font-family:'Orbitron'; margin-bottom:1rem; font-size:1rem; text-transform:uppercase; letter-spacing:1px; border-bottom:1px solid rgba(0,240,255,0.15); padding-bottom:0.5rem;">ACTIVO</h3>
-                    <div class="table-wrap">
-                      <table class="balance-table">
-                        <thead>
-                          <tr><th>Concepto</th><th class="amount">Importe</th></tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td colspan="2" style="color:var(--accent-purple); font-family:'Orbitron'; font-weight:600; font-size:0.8rem; text-transform:uppercase; letter-spacing:1px; padding-top:1rem;">Activo No Corriente</td>
-                          </tr>
-                          <tr><td>Equipamiento y herramientas</td><td class="amount">800 €</td></tr>
-                          <tr><td>Moldes y matrices</td><td class="amount">400 €</td></tr>
-                          <tr><td>Equipamiento informático</td><td class="amount">350 €</td></tr>
-                          <tr>
-                            <td colspan="2" style="color:var(--accent-purple); font-family:'Orbitron'; font-weight:600; font-size:0.8rem; text-transform:uppercase; letter-spacing:1px; padding-top:1rem;">Activo Corriente</td>
-                          </tr>
-                          <tr><td>Stock de materias primas</td><td class="amount">600 €</td></tr>
-                          <tr><td>Stock de productos terminados</td><td class="amount">450 €</td></tr>
-                          <tr><td>Tesorería y caja *</td><td class="amount">2.393 €</td></tr>
-                          <tr class="total-row"><td><strong>TOTAL ACTIVO</strong></td><td class="amount"><strong>4.993 €</strong></td></tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-
-                  <!-- PASIVO + PN -->
-                  <div>
-                    <h3 style="color:var(--accent-purple); font-family:'Orbitron'; margin-bottom:1rem; font-size:1rem; text-transform:uppercase; letter-spacing:1px; border-bottom:1px solid rgba(188,60,252,0.15); padding-bottom:0.5rem;">PASIVO Y PATRIMONIO NETO</h3>
-                    <div class="table-wrap">
-                      <table class="balance-table">
-                        <thead>
-                          <tr><th>Concepto</th><th class="amount">Importe</th></tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td colspan="2" style="color:var(--accent-cyan); font-family:'Orbitron'; font-weight:600; font-size:0.8rem; text-transform:uppercase; letter-spacing:1px; padding-top:1rem;">Patrimonio Neto</td>
-                          </tr>
-                          <tr><td>Capital social (aportaciones)</td><td class="amount">2.500 €</td></tr>
-                          <tr><td>Resultado del ejercicio (PyG) *</td><td class="amount" style="color:#10b981; font-weight:600; text-shadow:0 0 8px rgba(16,185,129,0.3);">1.493 €</td></tr>
-                          <tr>
-                            <td colspan="2" style="color:var(--accent-cyan); font-family:'Orbitron'; font-weight:600; font-size:0.8rem; text-transform:uppercase; letter-spacing:1px; padding-top:1rem;">Pasivo No Corriente</td>
-                          </tr>
-                          <tr><td>Préstamo familiar (FFF)</td><td class="amount">700 €</td></tr>
-                          <tr>
-                            <td colspan="2" style="color:var(--accent-cyan); font-family:'Orbitron'; font-weight:600; font-size:0.8rem; text-transform:uppercase; letter-spacing:1px; padding-top:1rem;">Pasivo Corriente</td>
-                          </tr>
-                          <tr><td>Deudas con proveedores</td><td class="amount">200 €</td></tr>
-                          <tr><td>Hacienda Pública (IVA)</td><td class="amount">100 €</td></tr>
-                          <tr class="total-row"><td><strong>TOTAL PASIVO + PN</strong></td><td class="amount"><strong>4.993 €</strong></td></tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                </div>
-                <p style="font-size:0.75rem; color:var(--text-muted); margin-top:1.5rem; text-align:center; line-height:1.5;">
-                  * Nota: El <strong>Resultado del Ejercicio (PyG)</strong> de +1.493 € procede del beneficio neto de la Cuenta de Resultados anual. La <strong>Tesorería y caja</strong> final del Activo asciende a 2.393 € (900 € de caja inicial + 1.493 € de beneficio anual), garantizando la partida doble y el cuadre del balance.
-                </p>
+            <!-- ACTIVO -->
+            <div>
+              <h3 style="color:var(--accent-cyan); font-family:'Orbitron'; margin-bottom:1rem; font-size:1rem; text-transform:uppercase; letter-spacing:1px; border-bottom:1px solid rgba(0,240,255,0.15); padding-bottom:0.5rem;">ACTIVO</h3>
+              <div class="table-wrap">
+                <table class="balance-table">
+                  <thead>
+                    <tr><th>Concepto</th><th class="amount">Importe</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td colspan="2" style="color:var(--accent-purple); font-family:'Orbitron'; font-weight:600; font-size:0.8rem; text-transform:uppercase; letter-spacing:1px; padding-top:1rem;">Activo No Corriente</td>
+                    </tr>
+                    <tr><td>Equipamiento y herramientas</td><td class="amount">800 €</td></tr>
+                    <tr><td>Moldes y matrices</td><td class="amount">400 €</td></tr>
+                    <tr><td>Equipamiento informático</td><td class="amount">350 €</td></tr>
+                    <tr>
+                      <td colspan="2" style="color:var(--accent-purple); font-family:'Orbitron'; font-weight:600; font-size:0.8rem; text-transform:uppercase; letter-spacing:1px; padding-top:1rem;">Activo Corriente</td>
+                    </tr>
+                    <tr><td>Stock de materias primas</td><td class="amount">600 €</td></tr>
+                    <tr><td>Stock de productos terminados</td><td class="amount">450 €</td></tr>
+                    <tr><td>Tesorería y caja</td><td class="amount">900 €</td></tr>
+                    <tr class="total-row"><td><strong>TOTAL ACTIVO</strong></td><td class="amount"><strong>3.500 €</strong></td></tr>
+                  </tbody>
+                </table>
               </div>
+            </div>
 
-              <!-- CARA TRASERA: CUENTA DE RESULTADOS -->
-              <div class="flip-card-back content-block">
-                <h2 style="font-family:'Orbitron'; text-align:center; margin-bottom:2rem; color:var(--text-primary);">📊 Cuenta de Resultados (Año 1)</h2>
-                <div class="table-wrap">
-                  <table class="balance-table">
-                    <thead>
-                      <tr><th>Concepto de Ingreso / Gasto</th><th class="amount">Importe</th></tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td colspan="2" style="color:var(--accent-cyan); font-family:'Orbitron'; font-weight:600; font-size:0.8rem; text-transform:uppercase; letter-spacing:1px; padding-top:1rem;">Ingresos de Explotación</td>
-                      </tr>
-                      <tr><td>Venta de productos (100 uds./mes llaveros a 4 € promedio)</td><td class="amount" style="color:#10b981; font-weight:600;">+4.800 €</td></tr>
-                      <tr>
-                        <td colspan="2" style="color:var(--accent-purple); font-family:'Orbitron'; font-weight:600; font-size:0.8rem; text-transform:uppercase; letter-spacing:1px; padding-top:1rem;">Gastos de Explotación</td>
-                      </tr>
-                      <tr><td>Materias primas (resina, pigmentos, moldes)</td><td class="amount" style="color:var(--accent-pink);">-1.200 €</td></tr>
-                      <tr><td>Marketing digital (redes sociales y leads)</td><td class="amount" style="color:var(--accent-pink);">-600 €</td></tr>
-                      <tr><td>Embalaje y envíos exprés</td><td class="amount" style="color:var(--accent-pink);">-480 €</td></tr>
-                      <tr><td>Gestión fiscal, contable y asesoría</td><td class="amount" style="color:var(--accent-pink);">-400 €</td></tr>
-                      <tr><td>Gastos de constitución y notaría</td><td class="amount" style="color:var(--accent-pink);">-350 €</td></tr>
-                      <tr><td>Dominio web y herramientas online</td><td class="amount" style="color:var(--accent-pink);">-120 €</td></tr>
-                      <tr><td>Imprevistos y reservas de caja</td><td class="amount" style="color:var(--accent-pink);">-157 €</td></tr>
-                      <tr class="total-row">
-                        <td><strong>RESULTADO DEL EJERCICIO (PyG)</strong></td>
-                        <td class="amount" style="color:#10b981; font-weight:bold; text-shadow:var(--cyan-glow);"><strong>+1.493 €</strong></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <p style="font-size:0.75rem; color:var(--text-muted); margin-top:1.5rem; text-align:center; line-height:1.5;">
-                  Nota: La cuenta de resultados refleja los ingresos y gastos anuales del escenario realista. El beneficio de explotación resultante de +1.493 € se traslada directamente al Patrimonio Neto del Balance como "Resultado del ejercicio" para reflejar fielmente el estado contable real final al cierre del primer año.
-                </p>
+            <!-- PASIVO + PN -->
+            <div>
+              <h3 style="color:var(--accent-purple); font-family:'Orbitron'; margin-bottom:1rem; font-size:1rem; text-transform:uppercase; letter-spacing:1px; border-bottom:1px solid rgba(188,60,252,0.15); padding-bottom:0.5rem;">PASIVO Y PATRIMONIO NETO</h3>
+              <div class="table-wrap">
+                <table class="balance-table">
+                  <thead>
+                    <tr><th>Concepto</th><th class="amount">Importe</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td colspan="2" style="color:var(--accent-cyan); font-family:'Orbitron'; font-weight:600; font-size:0.8rem; text-transform:uppercase; letter-spacing:1px; padding-top:1rem;">Patrimonio Neto</td>
+                    </tr>
+                    <tr><td>Capital social (aportaciones)</td><td class="amount">2.500 €</td></tr>
+                    <tr>
+                      <td colspan="2" style="color:var(--accent-cyan); font-family:'Orbitron'; font-weight:600; font-size:0.8rem; text-transform:uppercase; letter-spacing:1px; padding-top:1rem;">Pasivo No Corriente</td>
+                    </tr>
+                    <tr><td>Préstamo familiar (FFF)</td><td class="amount">700 €</td></tr>
+                    <tr>
+                      <td colspan="2" style="color:var(--accent-cyan); font-family:'Orbitron'; font-weight:600; font-size:0.8rem; text-transform:uppercase; letter-spacing:1px; padding-top:1rem;">Pasivo Corriente</td>
+                    </tr>
+                    <tr><td>Deudas con proveedores</td><td class="amount">200 €</td></tr>
+                    <tr><td>Hacienda Pública (IVA)</td><td class="amount">100 €</td></tr>
+                    <tr class="total-row"><td><strong>TOTAL PASIVO + PN</strong></td><td class="amount"><strong>3.500 €</strong></td></tr>
+                  </tbody>
+                </table>
               </div>
-
             </div>
           </div>
-
-          <!-- Flecha Derecha -->
-          <button class="flip-arrow next-arrow" id="btnFlipNext" aria-label="Ver Cuenta de Resultados">
-            <span class="arrow-icon">▶</span>
-          </button>
-
+          <p style="font-size:0.75rem; color:var(--text-muted); margin-top:1.5rem; text-align:center; line-height:1.5;">
+            Nota: Balance de apertura estimado. Los valores representan la estructura financiera proyectada al inicio de la actividad empresarial. Aún no se han registrado ingresos ni beneficios.
+          </p>
         </div>
 
         <!-- Fuentes de financiación -->

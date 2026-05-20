@@ -572,8 +572,8 @@ function drawFinancialCharts() {
     ctx.stroke();
 
     // Data
-    const data = [4993, 4993]; // Activo vs Pasivo+PN (including PyG)
-    const maxVal = 6000;
+    const data = [3500, 3500]; // Activo vs Pasivo+PN (balance de apertura)
+    const maxVal = 4000;
     const labels = ['ACTIVO TOTAL', 'PASIVO + PN'];
     const colors = [
       { start: '#00f0ff', end: '#06b6d4', glow: 'rgba(0,240,255,0.35)' }, // Cyan
