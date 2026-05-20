@@ -1,21 +1,34 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Idea de negocio y propuesta de valor de GamerCharm – accesorios gamer artesanales únicos." />
   <title>Propuesta de Valor – GamerCharm</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+
+  <!-- ═══════════════════ NAVBAR ═══════════════════ -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
       <a href="index.html" class="nav-logo">
         <img src="Fotos/GamerCharms.png" alt="GamerCharm Logo" class="nav-logo-img" />
         <span class="nav-logo-text">GamerCharm</span>
       </a>
-      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+      
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <!-- Cart trigger -->
+        <button class="nav-cart-btn" id="navCartBtn" aria-label="Ver Inventario">
+          🛒
+          <span class="cart-badge" id="navCartBadge" style="display:none">0</span>
+        </button>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
       <ul class="nav-menu" id="navMenu">
         <li><a href="quienes-somos.html" class="nav-link">Quiénes Somos</a></li>
         <li><a href="propuesta-valor.html" class="nav-link">Propuesta de Valor</a></li>
@@ -41,104 +54,125 @@
 
   <section class="page-hero">
     <div class="section-container">
-      <span class="section-tag">Nuestro modelo</span>
-      <h1>Idea de Negocio y Propuesta de Valor</h1>
-      <p>El nicho que nadie estaba cubriendo bien</p>
+      <span class="section-tag">Value Proposition</span>
+      <h1>Propuesta de Valor</h1>
+      <p>La idea de negocio y el nicho gamer premium que estamos consolidando</p>
     </div>
   </section>
 
+  <!-- ═══════════════════ CONTENT ═══════════════════ -->
   <section class="content-section">
     <div class="section-container">
 
-      <div class="content-block" style="border-color:rgba(6,182,212,0.4);background:linear-gradient(135deg,rgba(6,182,212,0.05),var(--bg-card));">
-        <h2 style="color:var(--accent-cyan);">💡 La Idea</h2>
-        <p>El mercado de los videojuegos mueve miles de millones de euros al año, pero el segmento de accesorios físicos artesanales —charms, llaveros, figuras de resina— estaba prácticamente virgen en España. La mayoría de los coleccionistas compraban en tiendas extranjeras con largos tiempos de envío y precios elevados.</p>
-        <p>GamerCharm nace para cubrir esa brecha: <strong>accesorios gamer hechos a mano, diseñados en España, con entrega rápida y precios competitivos.</strong></p>
+      <!-- La Idea -->
+      <div class="content-block" style="border: 1px solid rgba(0,240,255,0.25); background: linear-gradient(135deg, rgba(0,240,255,0.06), rgba(6,7,12,0.9)); box-shadow: var(--cyan-glow); padding: 2.5rem;">
+        <h2 style="color:var(--accent-cyan); font-family:'Orbitron'; margin-bottom:1rem;">💡 La Idea de Negocio</h2>
+        <p style="color:var(--text-muted); font-size:1.02rem; line-height:1.65; margin-bottom:1rem;">
+          El mercado de los videojuegos mueve miles de millones de euros, pero los accesorios físicos coleccionables suelen ser burdas piezas de plástico masivas fabricadas por inyección barata y de importación lenta. La mayoría de los fans debían recurrir a portales internacionales con 6 semanas de transporte y aranceles elevados.
+        </p>
+        <p style="color:var(--text-muted); font-size:1.02rem; line-height:1.65;">
+          En GamerCharm revolucionamos este mercado local: <strong>forjamos accesorios gamer de resina premium de alta definición en España, curados y pintados a mano por Elena G., con entrega garantizada en 24-48 horas.</strong>
+        </p>
       </div>
 
-      <div class="two-col">
-        <div class="content-block">
-          <h2>🎮 El Problema</h2>
-          <ul>
-            <li>Falta de accesorios gamer artesanales en el mercado local</li>
-            <li>Importaciones con envíos de 4–8 semanas y altos aranceles</li>
-            <li>Productos masivos sin personalización ni alma</li>
-            <li>Precios desorbitados para coleccionistas en tiendas especializadas</li>
-            <li>Ausencia de diseños para franquicias medianas (Warhammer, Overwatch…)</li>
+      <!-- Problema / Solución -->
+      <div class="two-col" style="margin-top: 2rem;">
+        <div class="content-block" style="border: 1px solid var(--border); padding: 2rem;">
+          <h2 style="font-family:'Orbitron'; margin-bottom:1.25rem; color:var(--text-primary);">❌ El Problema del Sector</h2>
+          <ul class="cyber-list">
+            <li>Ausencia de fabricación artesanal premium de proximidad.</li>
+            <li>Envíos internacionales prolongados (4-8 semanas) sin tracking real.</li>
+            <li>Llaveros moldeados en plástico endeble sin alma ni detalle.</li>
+            <li>Costes de importación desorbitados y sobreprecios de distribuidores.</li>
+            <li>Nula posibilidad de personalización para el jugador medio.</li>
           </ul>
         </div>
-        <div class="content-block">
-          <h2>✅ Nuestra Solución</h2>
-          <ul>
-            <li>Fabricación local artesanal con resina de alta calidad</li>
-            <li>Envíos nacionales en 24–48 h, internacionales en 5–7 días</li>
-            <li>Diseños únicos e identificativos con cada franquicia</li>
-            <li>Precios accesibles: entre 10 € y 25 € por producto</li>
-            <li>Catálogo amplio que cubre múltiples universos gaming</li>
+
+        <div class="content-block" style="border: 1px solid var(--border); padding: 2rem;">
+          <h2 style="font-family:'Orbitron'; margin-bottom:1.25rem; color:var(--text-primary);">✅ La Fórmula GamerCharm</h2>
+          <ul class="cyber-list">
+            <li>Fabricación e-commerce local de proximidad directa.</li>
+            <li>Logística express en 24-48 horas con packaging Kraft ecológico.</li>
+            <li>Post-procesado manual, aerografía avanzada y laca UV protectora.</li>
+            <li>Precios directos D2C altamente competitivos (desde 11,99 €).</li>
+            <li>Integración activa de carga e impresión de archivos .STL.</li>
           </ul>
         </div>
       </div>
 
-      <div class="content-block">
-        <h2>🏆 Propuesta de Valor</h2>
-        <p>GamerCharm ofrece <strong>accesorios gamer artesanales únicos</strong> a <strong>jugadores apasionados</strong> que quieren expresar su identidad gaming en el mundo físico, a un <strong>precio justo</strong> y con la <strong>calidad artesanal española</strong>.</p>
-        <div class="three-col" style="margin-top:1.5rem;">
-          <div style="padding:1.5rem;background:rgba(124,58,237,0.1);border-radius:12px;border:1px solid rgba(124,58,237,0.3);text-align:center;">
-            <span class="highlight-number">🎨</span>
-            <strong>Exclusividad</strong>
-            <p style="color:var(--text-muted);font-size:0.85rem;margin-top:0.5rem;">Diseños originales que no encontrarás en ninguna otra tienda</p>
+      <!-- Propuesta de Valor Canvas -->
+      <div class="content-block" style="border: 1px solid var(--border); padding: 2.5rem; margin-top: 2rem;">
+        <h2 style="font-family:'Orbitron'; text-align:center; margin-bottom:2rem; color:var(--text-primary);">🏆 Propuesta de Valor Estratégica</h2>
+        <p style="text-align:center; max-width:700px; margin: 0 auto 2rem; color:var(--text-muted); line-height:1.6;">
+          Ofrecemos <strong>accesorios de coleccionismo físico premium</strong> a <strong>gamers activos y entusiastas del lore</strong> que desean forjar su identidad en el mundo real, garantizando un <strong>precio cerrado competitivo</strong> y un <strong>detalle tridimensional microscópico</strong>.
+        </p>
+
+        <div class="three-col">
+          <div style="padding:1.5rem; background:rgba(188,60,252,0.06); border-radius:12px; border:1px solid rgba(188,60,252,0.25); text-align:center; box-shadow: var(--purple-glow);">
+            <span style="font-size: 2.5rem; display:block; margin-bottom:0.5rem;">🎨</span>
+            <strong style="font-family:'Orbitron'; color:var(--text-primary); display:block; margin-bottom:0.5rem;">Exclusividad Iridiscente</strong>
+            <p style="color:var(--text-muted); font-size:0.85rem; line-height:1.5;">Aerografía manual de Elena G. con pigmentos acrílicos multicapa de alta gama.</p>
           </div>
-          <div style="padding:1.5rem;background:rgba(6,182,212,0.1);border-radius:12px;border:1px solid rgba(6,182,212,0.3);text-align:center;">
-            <span class="highlight-number">⚡</span>
-            <strong>Rapidez</strong>
-            <p style="color:var(--text-muted);font-size:0.85rem;margin-top:0.5rem;">Envíos nacionales express desde España</p>
+          
+          <div style="padding:1.5rem; background:rgba(0,240,255,0.06); border-radius:12px; border:1px solid rgba(0,240,255,0.25); text-align:center; box-shadow: var(--cyan-glow);">
+            <span style="font-size: 2.5rem; display:block; margin-bottom:0.5rem;">⚡</span>
+            <strong style="font-family:'Orbitron'; color:var(--text-primary); display:block; margin-bottom:0.5rem;">Resina Curada UV</strong>
+            <p style="color:var(--text-muted); font-size:0.85rem; line-height:1.5;">Definición nanométrica mediante estereolitografía frente a filamento tosco.</p>
           </div>
-          <div style="padding:1.5rem;background:rgba(236,72,153,0.1);border-radius:12px;border:1px solid rgba(236,72,153,0.3);text-align:center;">
-            <span class="highlight-number">💰</span>
-            <strong>Precio Justo</strong>
-            <p style="color:var(--text-muted);font-size:0.85rem;margin-top:0.5rem;">Sin los márgenes abusivos de las tiendas de importación</p>
+          
+          <div style="padding:1.5rem; background:rgba(236,72,153,0.06); border-radius:12px; border:1px solid rgba(236,72,153,0.25); text-align:center; box-shadow: var(--pink-glow);">
+            <span style="font-size: 2.5rem; display:block; margin-bottom:0.5rem;">💰</span>
+            <strong style="font-family:'Orbitron'; color:var(--text-primary); display:block; margin-bottom:0.5rem;">Forja de Proximidad</strong>
+            <p style="color:var(--text-muted); font-size:0.85rem; line-height:1.5;">Distribución Direct-to-Consumer (D2C) que elimina márgenes de intermediarios.</p>
           </div>
         </div>
       </div>
 
-      <div class="content-block">
-        <h2>👥 Segmento de Clientes</h2>
-        <div class="two-col" style="margin-top:1rem;">
+      <!-- Segmento & Canales -->
+      <div class="content-block" style="border: 1px solid var(--border); padding: 2.5rem; margin-top: 2rem;">
+        <h2 style="font-family:'Orbitron'; margin-bottom:2rem; text-align:center; color:var(--text-primary);">👥 Segmentación de Mercado & Canales</h2>
+        <div class="two-col">
           <div>
-            <h3 style="color:var(--accent-cyan);margin-bottom:0.75rem;">Perfil principal</h3>
-            <ul>
-              <li>Gamers de 16–35 años</li>
-              <li>Coleccionistas de merch gaming</li>
-              <li>Usuarios de redes sociales (TikTok, Instagram)</li>
-              <li>Compradores habituales de productos de nicho online</li>
+            <h3 style="color:var(--accent-cyan); font-family:'Orbitron'; margin-bottom:0.75rem;">Perfil Target Principal</h3>
+            <ul class="cyber-list">
+              <li>Comunidad gamer de 16-35 años (Generación Z y Millennials).</li>
+              <li>Coleccionistas entusiastas de figuras de nicho y de E-sports.</li>
+              <li>Consumidores digitales activos en TikTok, Twitch e Instagram.</li>
+              <li>Amantes de la personalización física de su setup de escritorio.</li>
             </ul>
           </div>
           <div>
-            <h3 style="color:var(--accent-purple);margin-bottom:0.75rem;">Canales de venta</h3>
-            <ul>
-              <li>Tienda online propia (web)</li>
-              <li>Wallapop / Vinted para ventas locales</li>
-              <li>Instagram & TikTok Shop</li>
-              <li>Eventos gaming y ferias de coleccionismo</li>
+            <h3 style="color:var(--accent-purple); font-family:'Orbitron'; margin-bottom:0.75rem;">Canales de Conversión</h3>
+            <ul class="cyber-list">
+              <li>Plataforma E-commerce Directa optimizada.</li>
+              <li>Redes Sociales orgánicas (TikTok Forge & Instagram drops).</li>
+              <li>Ferias de E-sports y convenciones locales de videojuegos.</li>
+              <li>Marketing de guerrilla a través de comunidades de Discord.</li>
             </ul>
           </div>
         </div>
       </div>
 
-      <div class="content-block">
-        <h2>📈 Modelo de Ingresos</h2>
-        <p>El modelo de negocio es directo al consumidor (D2C). Cada producto se vende con un margen bruto estimado del 60–70% sobre el coste de materiales, lo que permite reinvertir en diseño, marketing y nuevas líneas de producto.</p>
-        <p>A futuro, se contempla la posibilidad de ofrecer <strong>personalización bajo pedido</strong> con un sobreprecio del 20%, abriendo una nueva línea de ingresos premium.</p>
+      <!-- Modelo de Ingresos -->
+      <div class="content-block" style="border: 1px solid var(--border); padding: 2.5rem; margin-top: 2rem;">
+        <h2 style="font-family:'Orbitron'; margin-bottom:1.25rem; color:var(--text-primary);">📈 Escalabilidad & Margen Comercial</h2>
+        <p style="color:var(--text-muted); font-size:1rem; line-height:1.65; margin-bottom:1rem;">
+          Al forjar directamente el loot y no depender de terceros ni aranceles, GamerCharm goza de un margen de contribución bruto del <strong>65% al 75%</strong> por charm vendido. Esta solidez financiera amortiza rápidamente los costes fijos de maquinaria de impresión y energía.
+        </p>
+        <p style="color:var(--text-muted); font-size:1rem; line-height:1.65;">
+          Además, la introducción del modelador STL express abre un canal de ingresos premium de alto valor añadido y coste marginal cero para la empresa, consolidando a GamerCharm como una startup altamente rentable en su primer año fiscal.
+        </p>
       </div>
 
     </div>
   </section>
 
+  <!-- ═══════════════════ FOOTER ═══════════════════ -->
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-brand">
         <img src="Fotos/GamerCharms.png" alt="GamerCharm" class="footer-logo" />
-        <p>© 2025 GamerCharm. Todos los derechos reservados.</p>
+        <p>© 2026 GamerCharm. Todos los derechos reservados.</p>
       </div>
       <div class="footer-links">
         <a href="quienes-somos.html">Quiénes Somos</a>
@@ -148,6 +182,7 @@
       </div>
     </div>
   </footer>
+
   <script src="js/main.js"></script>
 </body>
 </html>

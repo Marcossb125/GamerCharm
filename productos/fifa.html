@@ -1,21 +1,34 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Colección FIFA / EA FC de GamerCharm – accesorios artesanales de resina." />
   <title>FIFA / FC – GamerCharm</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
+
+  <!-- ═══════════════════ NAVBAR ═══════════════════ -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
       <a href="../index.html" class="nav-logo">
         <img src="../Fotos/GamerCharms.png" alt="GamerCharm Logo" class="nav-logo-img" />
         <span class="nav-logo-text">GamerCharm</span>
       </a>
-      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+      
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <!-- Cart trigger -->
+        <button class="nav-cart-btn" id="navCartBtn" aria-label="Ver Inventario">
+          🛒
+          <span class="cart-badge" id="navCartBadge" style="display:none">0</span>
+        </button>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
       <ul class="nav-menu" id="navMenu">
         <li><a href="../quienes-somos.html" class="nav-link">Quiénes Somos</a></li>
         <li><a href="../propuesta-valor.html" class="nav-link">Propuesta de Valor</a></li>
@@ -39,11 +52,11 @@
 
   <div class="breadcrumb"><a href="../index.html">Inicio</a><span>›</span><a href="../productos.html">Productos</a><span>›</span>FIFA / FC</div>
 
-  <section class="page-hero" style="background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(16,185,129,0.15) 0%,transparent 60%);">
+  <section class="page-hero" style="background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(188,60,252,0.1) 0%,transparent 65%);">
     <div class="section-container">
-      <span class="section-tag" style="background:rgba(16,185,129,0.15);border-color:rgba(16,185,129,0.4);color:#059669;">⚽ FIFA / FC</span>
+      <span class="section-tag" style="background:rgba(188,60,252,0.1); border-color:var(--accent-purple); color:var(--accent-purple);">⚽ FIFA / FC</span>
       <h1>Colección FIFA / EA FC</h1>
-      <p>Accesorios artesanales de resina para los amantes del fútbol y el juego más vendido del año</p>
+      <p>Accesorios artesanales de resina para los amantes del fútbol y el juego deportivo más vendido</p>
     </div>
   </section>
 
@@ -51,43 +64,56 @@
     <div class="section-container">
       <div class="products-grid">
 
+        <!-- Copa del FIFA -->
         <div class="product-card">
           <div class="product-img-wrap">
             <img src="../Fotos/Productos/Producto copa del fifa.png" alt="Copa del FIFA" loading="lazy" />
           </div>
           <div class="product-info">
-            <span class="product-game-tag" style="background:rgba(16,185,129,0.15);color:#059669;">FIFA / FC</span>
-            <p class="product-name">Copa del FIFA</p>
-            <p style="color:var(--text-muted);font-size:0.85rem;">Réplica artesanal del trofeo más codiciado de FIFA Ultimate Team. Resina dorada con base plateada, ideal para coleccionistas y fans del modo Ultimate Team.</p>
-            <p class="product-price">14,99 €</p>
+            <span class="product-game-tag">FIFA / FC</span>
+            <h3 class="product-name">Copa del FIFA</h3>
+            <p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:1rem;">Réplica artesanal del trofeo más codiciado de FIFA Ultimate Team. Resina dorada con base plateada, ideal para coleccionistas y fans.</p>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-top:auto;">
+              <span class="product-price">14,99 €</span>
+              <button class="btn btn-primary btn-sm" onclick="addToCart('ff-cup', 'Copa del FIFA', 14.99, 'Fotos/Productos/Producto copa del fifa.png')">
+                Equipar 🛒
+              </button>
+            </div>
           </div>
         </div>
 
+        <!-- Llavero FC Barcelona -->
         <div class="product-card">
           <div class="product-img-wrap">
             <img src="../Fotos/Productos/Producto fifa F.C. Barcelona keyring.png" alt="Llavero F.C. Barcelona" loading="lazy" />
           </div>
           <div class="product-info">
-            <span class="product-game-tag" style="background:rgba(16,185,129,0.15);color:#059669;">FIFA / FC</span>
-            <p class="product-name">Llavero F.C. Barcelona</p>
-            <p style="color:var(--text-muted);font-size:0.85rem;">Llavero de resina artesanal con el escudo del F.C. Barcelona estilo FIFA. Acabado azulgrana con detalles dorados. Para los culés que también son gamers.</p>
-            <p class="product-price">12,99 €</p>
+            <span class="product-game-tag">FIFA / FC</span>
+            <h3 class="product-name">Llavero F.C. Barcelona</h3>
+            <p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:1rem;">Llavero de resina artesanal con el escudo del F.C. Barcelona estilo FIFA. Acabado azulgrana con detalles dorados. Para los culés gamers.</p>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-top:auto;">
+              <span class="product-price">12,99 €</span>
+              <button class="btn btn-primary btn-sm" onclick="addToCart('ff-barca', 'Llavero F.C. Barcelona', 12.99, 'Fotos/Productos/Producto fifa F.C. Barcelona keyring.png')">
+                Equipar 🛒
+              </button>
+            </div>
           </div>
         </div>
 
       </div>
 
-      <div style="text-align:center;margin-top:3rem;">
+      <div style="text-align:center; margin-top:4rem;">
         <a href="../productos.html" class="btn btn-outline">← Ver todas las colecciones</a>
       </div>
     </div>
   </section>
 
+  <!-- ═══════════════════ FOOTER ═══════════════════ -->
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-brand">
         <img src="../Fotos/GamerCharms.png" alt="GamerCharm" class="footer-logo" />
-        <p>© 2025 GamerCharm. Todos los derechos reservados.</p>
+        <p>© 2026 GamerCharm. Todos los derechos reservados.</p>
       </div>
       <div class="footer-links">
         <a href="../quienes-somos.html">Quiénes Somos</a>
@@ -97,6 +123,7 @@
       </div>
     </div>
   </footer>
+
   <script src="../js/main.js"></script>
 </body>
 </html>

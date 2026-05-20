@@ -1,21 +1,34 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Contacta con GamerCharm – estamos aquí para ayudarte." />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contacta con la Guild de GamerCharm – Preguntas frecuentes y ticket de soporte." />
   <title>Contacto – GamerCharm</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+
+  <!-- ═══════════════════ NAVBAR ═══════════════════ -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
       <a href="index.html" class="nav-logo">
         <img src="Fotos/GamerCharms.png" alt="GamerCharm Logo" class="nav-logo-img" />
         <span class="nav-logo-text">GamerCharm</span>
       </a>
-      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+      
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <!-- Cart trigger -->
+        <button class="nav-cart-btn" id="navCartBtn" aria-label="Ver Inventario">
+          🛒
+          <span class="cart-badge" id="navCartBadge" style="display:none">0</span>
+        </button>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
       <ul class="nav-menu" id="navMenu">
         <li><a href="quienes-somos.html" class="nav-link">Quiénes Somos</a></li>
         <li><a href="propuesta-valor.html" class="nav-link">Propuesta de Valor</a></li>
@@ -41,92 +54,138 @@
 
   <section class="page-hero">
     <div class="section-container">
-      <span class="section-tag">Habla con nosotros</span>
-      <h1>Contacto</h1>
-      <p>¿Tienes alguna pregunta, pedido especial o propuesta? Escríbenos.</p>
+      <span class="section-tag">Guild Support</span>
+      <h1>Abrir un Ticket</h1>
+      <p>Envía tu misión, dudas o propuestas directamente a la Forja de GamerCharm</p>
     </div>
   </section>
 
+  <!-- ═══════════════════ CONTACT GRID ═══════════════════ -->
   <section class="content-section">
     <div class="section-container">
       <div class="contact-grid">
-
-        <!-- Formulario -->
-        <div class="content-block">
-          <h2 style="margin-bottom:1.5rem;">✉️ Envíanos un mensaje</h2>
+        
+        <!-- Guild Application Form (Ticket Theme) -->
+        <div class="content-block guild-form-container" style="border: 1px solid var(--border); padding: 2.5rem;">
+          <h2 style="font-family:'Orbitron'; margin-bottom:1.5rem; color:var(--text-primary);">🎫 Guild Signup Ticket</h2>
+          
           <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)">
-            <div class="two-col" style="gap:1rem;">
+            <div class="two-col" style="gap:1.5rem;">
               <div class="form-group">
-                <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+                <label for="nombre" style="font-family:'Orbitron';">Gamer Tag (Nombre)</label>
+                <input type="text" id="nombre" name="nombre" placeholder="ej. @pixel_warrior" required />
               </div>
               <div class="form-group">
-                <label for="apellido">Apellido</label>
-                <input type="text" id="apellido" name="apellido" placeholder="Tu apellido" />
+                <label for="clase" style="font-family:'Orbitron';">Clase de Consulta</label>
+                <select id="clase" name="clase" style="width:100%; background:var(--bg-card); color:var(--text-primary); border:1px solid var(--border); padding:0.8rem 1rem; border-radius:8px; outline:none; font-family:'Inter'; cursor:pointer;">
+                  <option value="general">Soporte General 🛡️</option>
+                  <option value="stl">Pedido Personalizado STL 💿</option>
+                  <option value="inversor">Propuesta de Inversor 📈</option>
+                  <option value="squad">Colaboración / Squad ⚡</option>
+                </select>
               </div>
             </div>
+
             <div class="form-group">
-              <label for="email">Email</label>
+              <label for="email" style="font-family:'Orbitron';">Canal de Enlace (Email)</label>
               <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required />
             </div>
+
             <div class="form-group">
-              <label for="asunto">Asunto</label>
-              <input type="text" id="asunto" name="asunto" placeholder="¿En qué podemos ayudarte?" />
+              <label for="mensaje" style="font-family:'Orbitron';">Detalles de la Misión (Mensaje)</label>
+              <textarea id="mensaje" name="mensaje" placeholder="Describe los detalles de tu consulta, pedidos personalizados o lore..." required></textarea>
             </div>
-            <div class="form-group">
-              <label for="mensaje">Mensaje</label>
-              <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos tu consulta, pedido especial o lo que necesites..." required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary" id="submitBtn" style="width:100%;justify-content:center;">
-              Enviar Mensaje 🚀
+
+            <button type="submit" class="btn btn-primary" id="submitBtn" style="width:100%; justify-content:center;">
+              Enviar Ticket de Soporte 🚀
             </button>
-            <div id="formSuccess" style="display:none;text-align:center;padding:1rem;background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.4);border-radius:8px;color:#10b981;">
-              ✅ ¡Mensaje enviado! Te responderemos en menos de 24 h.
+
+            <div id="formSuccess" style="display:none; text-align:center; padding:1rem; margin-top: 1rem; background:rgba(16,185,129,0.1); border:1px solid rgba(16,185,129,0.4); border-radius:8px; color:#10b981; font-family:'Orbitron'; font-size:0.88rem;">
+              ✅ ¡TICKET DE SOPORTE ENVIADO! Te responderemos en menos de 24 h.
             </div>
           </form>
         </div>
 
         <!-- Info de contacto -->
         <div class="contact-info">
-          <div class="contact-item">
-            <span class="contact-icon">📧</span>
+          
+          <div class="contact-item" style="border: 1px solid var(--border); padding:1.5rem; border-radius:8px;">
+            <span class="contact-icon" style="font-size:2rem; margin-right:1rem;">📧</span>
             <div>
-              <h3>Email</h3>
-              <p>hola@gamercharm.es</p>
-              <p style="font-size:0.8rem;margin-top:0.25rem;">Respondemos en menos de 24 h laborables</p>
+              <h3 style="font-family:'Orbitron'; margin-bottom:0.25rem;">E-mail Oficial</h3>
+              <p style="color:var(--accent-cyan); font-weight:600;">hola@gamercharm.es</p>
+              <p style="font-size:0.8rem; margin-top:0.25rem; color:var(--text-muted);">Respondemos en menos de 24 h laborables</p>
             </div>
           </div>
-          <div class="contact-item">
-            <span class="contact-icon">📱</span>
+
+          <div class="contact-item" style="border: 1px solid var(--border); padding:1.5rem; border-radius:8px;">
+            <span class="contact-icon" style="font-size:2rem; margin-right:1rem;">📸</span>
             <div>
-              <h3>Instagram</h3>
-              <p>@gamercharm.es</p>
-              <p style="font-size:0.8rem;margin-top:0.25rem;">Síguenos para novedades y sorteos</p>
+              <h3 style="font-family:'Orbitron'; margin-bottom:0.25rem;">Instagram Guild</h3>
+              <p style="color:var(--accent-purple); font-weight:600;">@gamercharm.es</p>
+              <p style="font-size:0.8rem; margin-top:0.25rem; color:var(--text-muted);">Sorteos y novedades semanales</p>
             </div>
           </div>
-          <div class="contact-item">
-            <span class="contact-icon">🎵</span>
+
+          <div class="contact-item" style="border: 1px solid var(--border); padding:1.5rem; border-radius:8px;">
+            <span class="contact-icon" style="font-size:2rem; margin-right:1rem;">🎵</span>
             <div>
-              <h3>TikTok</h3>
-              <p>@gamercharm</p>
-              <p style="font-size:0.8rem;margin-top:0.25rem;">Proceso de fabricación y unboxings</p>
+              <h3 style="font-family:'Orbitron'; margin-bottom:0.25rem;">TikTok Forge</h3>
+              <p style="color:var(--accent-pink); font-weight:600;">@gamercharm</p>
+              <p style="font-size:0.8rem; margin-top:0.25rem; color:var(--text-muted);">Proceso de modelado, impresión y unboxing</p>
             </div>
           </div>
-          <div class="contact-item">
-            <span class="contact-icon">📍</span>
+
+          <div class="contact-item" style="border: 1px solid var(--border); padding:1.5rem; border-radius:8px; background: linear-gradient(135deg, rgba(0,240,255,0.08), rgba(188,60,252,0.04));">
+            <span class="contact-icon" style="font-size:2rem; margin-right:1rem;">⏰</span>
             <div>
-              <h3>Ubicación</h3>
-              <p>España</p>
-              <p style="font-size:0.8rem;margin-top:0.25rem;">Envíos a toda España y Europa</p>
+              <h3 style="font-family:'Orbitron'; margin-bottom:0.25rem;">Horario de la Guild</h3>
+              <p style="color:var(--text-primary);">Lunes a Viernes · 10:00 – 20:00</p>
+              <p style="font-size:0.8rem; margin-top:0.25rem; color:var(--text-muted);">Fines de semana descansamos en taberna</p>
             </div>
           </div>
-          <div class="contact-item" style="background:linear-gradient(135deg,rgba(124,58,237,0.1),rgba(6,182,212,0.05));border-color:rgba(124,58,237,0.3);">
-            <span class="contact-icon">⏰</span>
-            <div>
-              <h3>Horario de atención</h3>
-              <p>Lunes a Viernes · 10:00 – 20:00</p>
-              <p style="font-size:0.8rem;margin-top:0.25rem;">Fines de semana respondemos el lunes</p>
-            </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ FAQS ACCORDION ═══════════════════ -->
+  <section class="page-section" style="background: rgba(6,7,12,0.9); border-top: 1px solid var(--border);">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag cyan">FAQ</span>
+        <h2 class="section-title">Preguntas <span>Frecuentes</span></h2>
+        <p class="section-subtitle">Respuestas rápidas para resolver tus dudas de inmediato</p>
+      </div>
+
+      <div class="faq-container" style="max-width:800px; margin:0 auto;">
+        
+        <div class="faq-item">
+          <button class="faq-trigger">¿Cuánto tardan los envíos? <span class="faq-icon">＋</span></button>
+          <div class="faq-content">
+            <p>Procesamos tus pedidos en menos de 24 horas laborables en nuestra forja de resina. Los envíos nacionales Express garantizan la entrega en tu domicilio en un plazo de 24 a 48 horas adicionales (España Península).</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-trigger">¿Puedo subir mi propio archivo STL? <span class="faq-icon">＋</span></button>
+          <div class="faq-content">
+            <p>¡Por supuesto! Utiliza nuestro Custom Loot Creator en la sección de Productos. Sube tu archivo .STL de hasta 60x60x60mm, nuestro sistema simulará el escaneado láser en 3D y añadirá tu llavero personalizado al inventario por un precio único y cerrado de 19,99 €.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-trigger">¿Qué material utilizáis para fabricar? <span class="faq-icon">＋</span></button>
+          <div class="faq-content">
+            <p>A diferencia de las impresiones 3D convencionales de plástico PLA fabricadas con filamentos burdos, en GamerCharm forjamos todas nuestras piezas utilizando resina fotosensible de curado UV de alta tenacidad (tipo ABS-Like). Esto nos otorga una resolución microscópica de capa (0.05mm) y una superficie suave ideal para post-procesado y aerografía.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-trigger">¿Los llaveros vienen pintados? <span class="faq-icon">＋</span></button>
+          <div class="faq-content">
+            <p>Sí, todos los charms de nuestra colección oficial de universos vienen completamente pintados a mano por Elena G., nuestra lead painter, con imprimación profesional, aerógrafo, pincel de detalle y una capa de barniz protector UV resistente a golpes.</p>
           </div>
         </div>
 
@@ -134,11 +193,12 @@
     </div>
   </section>
 
+  <!-- ═══════════════════ FOOTER ═══════════════════ -->
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-brand">
         <img src="Fotos/GamerCharms.png" alt="GamerCharm" class="footer-logo" />
-        <p>© 2025 GamerCharm. Todos los derechos reservados.</p>
+        <p>© 2026 GamerCharm. Todos los derechos reservados.</p>
       </div>
       <div class="footer-links">
         <a href="quienes-somos.html">Quiénes Somos</a>
@@ -153,12 +213,15 @@
   <script>
     function handleSubmit(e) {
       e.preventDefault();
-      document.getElementById('submitBtn').textContent = 'Enviando...';
+      const btn = document.getElementById('submitBtn');
+      btn.textContent = 'Enviando Ticket...';
+      btn.style.opacity = '0.7';
       setTimeout(() => {
         document.getElementById('contactForm').reset();
-        document.getElementById('submitBtn').textContent = 'Enviar Mensaje 🚀';
+        btn.textContent = 'Enviar Ticket de Soporte 🚀';
+        btn.style.opacity = '1';
         document.getElementById('formSuccess').style.display = 'block';
-      }, 1000);
+      }, 1200);
     }
   </script>
 </body>

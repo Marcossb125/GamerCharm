@@ -1,21 +1,34 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Otros productos de GamerCharm – accesorios artesanales de otros universos." />
   <title>Otros – GamerCharm</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
+
+  <!-- ═══════════════════ NAVBAR ═══════════════════ -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
       <a href="../index.html" class="nav-logo">
         <img src="../Fotos/GamerCharms.png" alt="GamerCharm Logo" class="nav-logo-img" />
         <span class="nav-logo-text">GamerCharm</span>
       </a>
-      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+      
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <!-- Cart trigger -->
+        <button class="nav-cart-btn" id="navCartBtn" aria-label="Ver Inventario">
+          🛒
+          <span class="cart-badge" id="navCartBadge" style="display:none">0</span>
+        </button>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
       <ul class="nav-menu" id="navMenu">
         <li><a href="../quienes-somos.html" class="nav-link">Quiénes Somos</a></li>
         <li><a href="../propuesta-valor.html" class="nav-link">Propuesta de Valor</a></li>
@@ -39,9 +52,9 @@
 
   <div class="breadcrumb"><a href="../index.html">Inicio</a><span>›</span><a href="../productos.html">Productos</a><span>›</span>Otros</div>
 
-  <section class="page-hero">
+  <section class="page-hero" style="background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(188,60,252,0.1) 0%,transparent 65%);">
     <div class="section-container">
-      <span class="section-tag">✨ Otros universos</span>
+      <span class="section-tag" style="background:rgba(188,60,252,0.1); border-color:var(--accent-purple); color:var(--accent-purple);">✨ Otros universos</span>
       <h1>Otros Productos</h1>
       <p>Anime, manga y más universos que amamos y que no podíamos dejar sin representar</p>
     </div>
@@ -51,37 +64,44 @@
     <div class="section-container">
       <div class="products-grid" style="max-width:380px;">
 
+        <!-- Black Clover -->
         <div class="product-card">
           <div class="product-img-wrap">
             <img src="../Fotos/Productos/Otros Productos/Black Clover keyRing.png" alt="Llavero Black Clover" loading="lazy" />
           </div>
           <div class="product-info">
             <span class="product-game-tag">Anime / Manga</span>
-            <p class="product-name">Llavero Black Clover</p>
-            <p style="color:var(--text-muted);font-size:0.85rem;">Llavero artesanal de resina inspirado en Black Clover, el manga y anime de magia y superación. Diseño detallado con el grimorio de Asta. Para fans del anime con estilo gamer.</p>
-            <p class="product-price">11,99 €</p>
+            <h3 class="product-name">Llavero Black Clover</h3>
+            <p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:1rem;">Llavero artesanal de resina inspirado en Black Clover. Diseño detallado con el grimorio de Asta. Para fans del anime con estilo gamer.</p>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-top:auto;">
+              <span class="product-price">11,99 €</span>
+              <button class="btn btn-primary btn-sm" onclick="addToCart('ot-clover', 'Llavero Black Clover', 11.99, 'Fotos/Productos/Otros Productos/Black Clover keyRing.png')">
+                Equipar 🛒
+              </button>
+            </div>
           </div>
         </div>
 
       </div>
 
-      <div style="margin-top:3rem;padding:2rem;background:linear-gradient(135deg,rgba(124,58,237,0.08),var(--bg-card));border:1px solid var(--border);border-radius:var(--radius);">
-        <h3 style="color:var(--accent-cyan);margin-bottom:0.75rem;">¿Echas de menos tu franquicia?</h3>
+      <div style="margin-top:3.5rem; padding:2rem; background: linear-gradient(135deg, rgba(0,240,255,0.08), rgba(188,60,252,0.04)); border: 1px solid var(--border); border-radius: 8px;">
+        <h3 style="color:var(--accent-cyan); margin-bottom:0.75rem; font-family:'Orbitron';">¿Echas de menos tu franquicia?</h3>
         <p style="color:var(--text-muted);">Esta sección crecerá con nuevos universos. Si quieres un charm de tu anime, videojuego o película favorita, cuéntanoslo. Podemos hacer pedidos personalizados.</p>
         <a href="../contacto.html" class="btn btn-primary" style="margin-top:1.25rem;">Pedir personalización</a>
       </div>
 
-      <div style="text-align:center;margin-top:2rem;">
+      <div style="text-align:center; margin-top:3rem;">
         <a href="../productos.html" class="btn btn-outline">← Ver todas las colecciones</a>
       </div>
     </div>
   </section>
 
+  <!-- ═══════════════════ FOOTER ═══════════════════ -->
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-brand">
         <img src="../Fotos/GamerCharms.png" alt="GamerCharm" class="footer-logo" />
-        <p>© 2025 GamerCharm. Todos los derechos reservados.</p>
+        <p>© 2026 GamerCharm. Todos los derechos reservados.</p>
       </div>
       <div class="footer-links">
         <a href="../quienes-somos.html">Quiénes Somos</a>
@@ -91,6 +111,7 @@
       </div>
     </div>
   </footer>
+
   <script src="../js/main.js"></script>
 </body>
 </html>

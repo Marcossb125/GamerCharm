@@ -1,21 +1,34 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Colección Counter-Strike de GamerCharm – accesorios artesanales de resina." />
   <title>Counter-Strike – GamerCharm</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
+
+  <!-- ═══════════════════ NAVBAR ═══════════════════ -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
       <a href="../index.html" class="nav-logo">
         <img src="../Fotos/GamerCharms.png" alt="GamerCharm Logo" class="nav-logo-img" />
         <span class="nav-logo-text">GamerCharm</span>
       </a>
-      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+      
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <!-- Cart trigger -->
+        <button class="nav-cart-btn" id="navCartBtn" aria-label="Ver Inventario">
+          🛒
+          <span class="cart-badge" id="navCartBadge" style="display:none">0</span>
+        </button>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
       <ul class="nav-menu" id="navMenu">
         <li><a href="../quienes-somos.html" class="nav-link">Quiénes Somos</a></li>
         <li><a href="../propuesta-valor.html" class="nav-link">Propuesta de Valor</a></li>
@@ -39,9 +52,9 @@
 
   <div class="breadcrumb"><a href="../index.html">Inicio</a><span>›</span><a href="../productos.html">Productos</a><span>›</span>Counter-Strike</div>
 
-  <section class="page-hero" style="background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(251,191,36,0.15) 0%,transparent 60%);">
+  <section class="page-hero" style="background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(0,240,255,0.1) 0%,transparent 65%);">
     <div class="section-container">
-      <span class="section-tag" style="background:rgba(251,191,36,0.15);border-color:rgba(251,191,36,0.4);color:#d97706;">🔫 Counter-Strike</span>
+      <span class="section-tag" style="background:rgba(0,240,255,0.1); border-color:var(--accent-cyan); color:var(--accent-cyan);">🔫 Counter-Strike</span>
       <h1>Colección Counter-Strike</h1>
       <p>Accesorios artesanales de resina inspirados en el shooter táctico más famoso del mundo</p>
     </div>
@@ -51,43 +64,56 @@
     <div class="section-container">
       <div class="products-grid">
 
+        <!-- CS Logo -->
         <div class="product-card">
           <div class="product-img-wrap">
             <img src="../Fotos/Productos/Producto Counter Strike.png" alt="Charm Counter Strike" loading="lazy" />
           </div>
           <div class="product-info">
-            <span class="product-game-tag" style="background:rgba(251,191,36,0.15);color:#d97706;">Counter-Strike</span>
-            <p class="product-name">Charm Counter-Strike CS2</p>
-            <p style="color:var(--text-muted);font-size:0.85rem;">Charm de resina con iconografía de Counter-Strike 2. Acabado táctico con tonos dorados y negros. Edición limitada.</p>
-            <p class="product-price">14,99 €</p>
+            <span class="product-game-tag">Counter-Strike</span>
+            <h3 class="product-name">Charm Counter-Strike CS2</h3>
+            <p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:1rem;">Charm de resina con iconografía de Counter-Strike 2. Acabado táctico con tonos dorados y negros. Edición limitada.</p>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-top:auto;">
+              <span class="product-price">14,99 €</span>
+              <button class="btn btn-primary btn-sm" onclick="addToCart('cs-logo', 'Charm Counter-Strike CS2', 14.99, 'Fotos/Productos/Producto Counter Strike.png')">
+                Equipar 🛒
+              </button>
+            </div>
           </div>
         </div>
 
+        <!-- Karambit -->
         <div class="product-card">
           <div class="product-img-wrap">
             <img src="../Fotos/Productos/Producto cuchillo karambit Counter Strike.png" alt="Cuchillo Karambit" loading="lazy" />
           </div>
           <div class="product-info">
-            <span class="product-game-tag" style="background:rgba(251,191,36,0.15);color:#d97706;">Counter-Strike</span>
-            <p class="product-name">Cuchillo Karambit</p>
-            <p style="color:var(--text-muted);font-size:0.85rem;">Réplica artesanal del legendario cuchillo Karambit de CS2. Resina de alta calidad con acabado metálico iridiscente. El skin más codiciado, ahora en físico.</p>
-            <p class="product-price">19,99 €</p>
+            <span class="product-game-tag">Counter-Strike</span>
+            <h3 class="product-name">Cuchillo Karambit</h3>
+            <p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:1rem;">Réplica artesanal del legendario cuchillo Karambit de CS2. Resina de alta calidad con acabado metálico iridiscente. El skin más codiciado en físico.</p>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-top:auto;">
+              <span class="product-price">19,99 €</span>
+              <button class="btn btn-primary btn-sm" onclick="addToCart('cs-karambit', 'Cuchillo Karambit', 19.99, 'Fotos/Productos/Producto cuchillo karambit Counter Strike.png')">
+                Equipar 🛒
+              </button>
+            </div>
           </div>
         </div>
 
       </div>
 
-      <div style="text-align:center;margin-top:3rem;">
+      <div style="text-align:center; margin-top:4rem;">
         <a href="../productos.html" class="btn btn-outline">← Ver todas las colecciones</a>
       </div>
     </div>
   </section>
 
+  <!-- ═══════════════════ FOOTER ═══════════════════ -->
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-brand">
         <img src="../Fotos/GamerCharms.png" alt="GamerCharm" class="footer-logo" />
-        <p>© 2025 GamerCharm. Todos los derechos reservados.</p>
+        <p>© 2026 GamerCharm. Todos los derechos reservados.</p>
       </div>
       <div class="footer-links">
         <a href="../quienes-somos.html">Quiénes Somos</a>
@@ -97,6 +123,7 @@
       </div>
     </div>
   </footer>
+
   <script src="../js/main.js"></script>
 </body>
 </html>

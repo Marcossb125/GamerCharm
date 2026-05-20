@@ -1,21 +1,34 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Catálogo completo de productos GamerCharm por franquicia." />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Catálogo completo de productos GamerCharm por franquicia y creador de llaveros 3D personalizados." />
   <title>Productos – GamerCharm</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+
+  <!-- ═══════════════════ NAVBAR ═══════════════════ -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
       <a href="index.html" class="nav-logo">
         <img src="Fotos/GamerCharms.png" alt="GamerCharm Logo" class="nav-logo-img" />
         <span class="nav-logo-text">GamerCharm</span>
       </a>
-      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+      
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <!-- Cart trigger -->
+        <button class="nav-cart-btn" id="navCartBtn" aria-label="Ver Inventario">
+          🛒
+          <span class="cart-badge" id="navCartBadge" style="display:none">0</span>
+        </button>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
       <ul class="nav-menu" id="navMenu">
         <li><a href="quienes-somos.html" class="nav-link">Quiénes Somos</a></li>
         <li><a href="propuesta-valor.html" class="nav-link">Propuesta de Valor</a></li>
@@ -41,60 +54,121 @@
 
   <section class="page-hero">
     <div class="section-container">
-      <span class="section-tag">Catálogo</span>
+      <span class="section-tag">Armería</span>
       <h1>Nuestros Productos</h1>
-      <p>Elige tu universo y encuentra el charm perfecto</p>
+      <p>Elige tu universo de loot o forja tus propios diseños en 3D</p>
     </div>
   </section>
 
-  <section class="page-section">
+  <!-- ═══════════════════ CATÁLOGO UNIVERSOS ═══════════════════ -->
+  <section class="page-section" style="padding-bottom: 2rem;">
     <div class="section-container">
       <div class="universe-grid">
         <a href="productos/pokemon.html" class="universe-card pokemon">
           <div class="universe-bg"></div>
           <span class="universe-icon">⚡</span>
           <h3>Pokémon</h3>
-          <p>3 productos · Desde 12,99 €</p>
+          <p>Llaveros legendarios · 12,99 €</p>
         </a>
         <a href="productos/overwatch.html" class="universe-card overwatch">
           <div class="universe-bg"></div>
           <span class="universe-icon">🎯</span>
           <h3>Overwatch</h3>
-          <p>2 productos · Desde 15,99 €</p>
+          <p>Réplicas detalladas · Desde 15,99 €</p>
         </a>
         <a href="productos/counter-strike.html" class="universe-card cs">
           <div class="universe-bg"></div>
           <span class="universe-icon">🔫</span>
           <h3>Counter-Strike</h3>
-          <p>2 productos · Desde 14,99 €</p>
+          <p>Cuchillos y logos · Desde 14,99 €</p>
         </a>
         <a href="productos/fifa.html" class="universe-card fifa">
           <div class="universe-bg"></div>
           <span class="universe-icon">⚽</span>
           <h3>FIFA / FC</h3>
-          <p>2 productos · Desde 12,99 €</p>
+          <p>Escudos y copas · 12,99 €</p>
         </a>
         <a href="productos/warhammer.html" class="universe-card warhammer">
           <div class="universe-bg"></div>
           <span class="universe-icon">⚔️</span>
           <h3>Warhammer</h3>
-          <p>1 producto · 19,99 €</p>
+          <p>Poder del Caos · 19,99 €</p>
         </a>
         <a href="productos/otros.html" class="universe-card otros">
           <div class="universe-bg"></div>
           <span class="universe-icon">✨</span>
           <h3>Otros</h3>
-          <p>1 producto · 11,99 €</p>
+          <p>Forja personalizada · 11,99 €</p>
         </a>
       </div>
     </div>
   </section>
 
+  <!-- ═══════════════════ CUSTOM LOOT CREATOR ═══════════════════ -->
+  <section class="page-section" id="custom-section" style="background: rgba(6,7,12,0.9); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag cyan">Engine Forge</span>
+        <h2 class="section-title">Custom <span>Loot Creator</span></h2>
+        <p class="section-subtitle">¿Tienes un modelo 3D propio? Sube tu archivo .STL y lo imprimiremos con resina premium a tu medida.</p>
+      </div>
+
+      <div class="content-block" style="max-width: 760px; margin: 0 auto; padding: 2.5rem; text-align: center; border: 2px dashed rgba(0,240,255,0.3); background: rgba(6,7,12,0.85); box-shadow: var(--cyan-glow);">
+        <div class="stl-upload-zone" id="pageStlZone" style="padding: 3rem 1.5rem; border-radius: 8px;">
+          <span class="scan-line"></span>
+          <span class="stl-upload-icon" style="font-size: 3.5rem; display: block; margin-bottom: 1rem;">💿</span>
+          <h3 id="pageStlText" style="font-family:'Orbitron'; font-weight: normal; font-size: 1.15rem; color: var(--text-primary);">
+            Arrastra tu archivo <strong>.STL</strong> aquí o haz clic para seleccionarlo
+          </h3>
+          <p style="color: var(--text-muted); font-size: 0.82rem; margin-top: 0.5rem;">Tamaño máximo de impresión: 60x60x60mm. Formatos soportados: .STL</p>
+          <input type="file" id="pageStlInput" accept=".stl" style="display: none;" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ MARKETING STRATEGY TABS ═══════════════════ -->
+  <section class="page-section">
+    <div class="section-container">
+      <div class="content-block spec-tabs-section" style="border: 1px solid var(--border); padding: 2.5rem;">
+        <h2 style="font-family: 'Orbitron'; text-align: center; margin-bottom: 2.5rem; color: var(--text-primary);">💎 GamerCharm Specs & E-commerce Strategy</h2>
+        
+        <div class="tab-buttons-container" style="justify-content: center; margin-bottom: 2rem;">
+          <button class="tab-btn active" data-target="spec-producto">📦 Producto (Specs)</button>
+          <button class="tab-btn" data-target="spec-precio">💰 Precio (D2C)</button>
+          <button class="tab-btn" data-target="spec-promocion">🔥 Promoción (Bundles)</button>
+          <button class="tab-btn" data-target="spec-distribucion">🚀 Distribución (24-48h)</button>
+        </div>
+
+        <div class="tab-content active" id="spec-producto">
+          <h3 style="font-family:'Orbitron'; color:var(--accent-cyan); margin-bottom:0.75rem;">Resina Fotosensible ABS-Like vs PLA</h3>
+          <p>Nuestros llaveros están moldeados utilizando resina fotosensible de curado ultravioleta de alta definición. Esto nos permite un nivel de definición microscópico (hasta 0.05mm de detalle) y un post-procesado liso y profesional, imposible de lograr con la impresión FDM de filamento plástico PLA estándar. La tenacidad de la resina ABS-Like garantiza una durabilidad extrema frente a caídas y roces diarios.</p>
+        </div>
+        
+        <div class="tab-content" id="spec-precio">
+          <h3 style="font-family:'Orbitron'; color:var(--accent-purple); margin-bottom:0.75rem;">Estrategia Direct-to-Consumer (D2C)</h3>
+          <p>Eliminamos intermediarios y distribuidores externos. Al fabricar localmente en España y vender directamente a través de nuestro e-commerce, reducimos costes operativos. Esta ventaja competitiva nos permite ofrecer charms artesanales premium por tan solo 12,99 € - 19,99 €, manteniendo un margen de contribución bruto de más del 65% ideal para la escalabilidad del proyecto.</p>
+        </div>
+        
+        <div class="tab-content" id="spec-promocion">
+          <h3 style="font-family:'Orbitron'; color:var(--accent-pink); margin-bottom:0.75rem;">Level Up Bundles & Custom Drops</h3>
+          <p>Fomentamos el valor medio de pedido (AOV) mediante estrategias de gamificación y lotes de producto. Ofrecemos el pack "Full Squad" (3 llaveros con 15% de descuento) y realizamos lanzamientos limitados (Custom Drops) sincronizados con los grandes torneos de E-sports y actualizaciones de videojuegos.</p>
+        </div>
+        
+        <div class="tab-content" id="spec-distribucion">
+          <h3 style="font-family:'Orbitron'; color:#10b981; margin-bottom:0.75rem;">Logística Express & Eco-Packaging</h3>
+          <p>Procesamiento del pedido en 24h. Los envíos se gestionan mediante mensajería Express nacional con entrega garantizada en 24-48 horas. Cada GamerCharm se entrega en un sobre de cartón Kraft acolchado ecológico, sellado con cera de lacre futurista y acompañado de una tarjeta de agradecimiento coleccionable con el lore del charm.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ FOOTER ═══════════════════ -->
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-brand">
         <img src="Fotos/GamerCharms.png" alt="GamerCharm" class="footer-logo" />
-        <p>© 2025 GamerCharm. Todos los derechos reservados.</p>
+        <p>© 2026 GamerCharm. Todos los derechos reservados.</p>
       </div>
       <div class="footer-links">
         <a href="quienes-somos.html">Quiénes Somos</a>
@@ -104,6 +178,7 @@
       </div>
     </div>
   </footer>
+
   <script src="js/main.js"></script>
 </body>
 </html>

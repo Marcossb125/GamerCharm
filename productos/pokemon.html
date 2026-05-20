@@ -1,21 +1,34 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Colección Pokémon de GamerCharm – llaveros artesanales de resina." />
   <title>Pokémon – GamerCharm</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
+
+  <!-- ═══════════════════ NAVBAR ═══════════════════ -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
       <a href="../index.html" class="nav-logo">
         <img src="../Fotos/GamerCharms.png" alt="GamerCharm Logo" class="nav-logo-img" />
         <span class="nav-logo-text">GamerCharm</span>
       </a>
-      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+      
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <!-- Cart trigger -->
+        <button class="nav-cart-btn" id="navCartBtn" aria-label="Ver Inventario">
+          🛒
+          <span class="cart-badge" id="navCartBadge" style="display:none">0</span>
+        </button>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
       <ul class="nav-menu" id="navMenu">
         <li><a href="../quienes-somos.html" class="nav-link">Quiénes Somos</a></li>
         <li><a href="../propuesta-valor.html" class="nav-link">Propuesta de Valor</a></li>
@@ -39,9 +52,9 @@
 
   <div class="breadcrumb"><a href="../index.html">Inicio</a><span>›</span><a href="../productos.html">Productos</a><span>›</span>Pokémon</div>
 
-  <section class="page-hero" style="background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(250,204,21,0.15) 0%,transparent 60%);">
+  <section class="page-hero" style="background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(0,240,255,0.1) 0%,transparent 65%);">
     <div class="section-container">
-      <span class="section-tag" style="background:rgba(250,204,21,0.15);border-color:rgba(250,204,21,0.4);color:#ca8a04;">⚡ Pokémon</span>
+      <span class="section-tag" style="background:rgba(0,240,255,0.1); border-color:var(--accent-cyan); color:var(--accent-cyan);">⚡ Pokémon</span>
       <h1>Colección Pokémon</h1>
       <p>Llaveros de resina artesanales inspirados en los Pokémon legendarios de tipo pájaro</p>
     </div>
@@ -51,55 +64,74 @@
     <div class="section-container">
       <div class="products-grid">
 
+        <!-- Articuno -->
         <div class="product-card">
           <div class="product-img-wrap">
             <img src="../Fotos/Productos/Pokemon Articuno keyRing.png" alt="Llavero Articuno" loading="lazy" />
           </div>
           <div class="product-info">
             <span class="product-game-tag">Pokémon</span>
-            <p class="product-name">Llavero Articuno</p>
-            <p style="color:var(--text-muted);font-size:0.85rem;">Charm de resina artesanal con Articuno, el Pokémon legendario de tipo Hielo y Volador. Acabado brillante con detalles azules iridiscentes.</p>
-            <p class="product-price">12,99 €</p>
+            <h3 class="product-name">Llavero Articuno</h3>
+            <p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:1rem;">Charm de resina artesanal con Articuno, el Pokémon legendario de tipo Hielo y Volador. Acabado brillante con detalles azules iridiscentes.</p>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-top:auto;">
+              <span class="product-price">12,99 €</span>
+              <button class="btn btn-primary btn-sm" onclick="addToCart('pk-articuno', 'Llavero Articuno', 12.99, 'Fotos/Productos/Pokemon Articuno keyRing.png')">
+                Equipar 🛒
+              </button>
+            </div>
           </div>
         </div>
 
+        <!-- Zapdos -->
         <div class="product-card">
           <div class="product-img-wrap">
             <img src="../Fotos/Productos/Pokemon Zapdos keyRing.png" alt="Llavero Zapdos" loading="lazy" />
           </div>
           <div class="product-info">
             <span class="product-game-tag">Pokémon</span>
-            <p class="product-name">Llavero Zapdos</p>
-            <p style="color:var(--text-muted);font-size:0.85rem;">Charm de resina artesanal con Zapdos, el Pokémon eléctrico legendario. Colores amarillo eléctrico con detalles dorados metalizados.</p>
-            <p class="product-price">12,99 €</p>
+            <h3 class="product-name">Llavero Zapdos</h3>
+            <p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:1rem;">Charm de resina artesanal con Zapdos, el Pokémon eléctrico legendario. Colores amarillo eléctrico con detalles dorados metalizados.</p>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-top:auto;">
+              <span class="product-price">12,99 €</span>
+              <button class="btn btn-primary btn-sm" onclick="addToCart('pk-zapdos', 'Llavero Zapdos', 12.99, 'Fotos/Productos/Pokemon Zapdos keyRing.png')">
+                Equipar 🛒
+              </button>
+            </div>
           </div>
         </div>
 
+        <!-- Moltres -->
         <div class="product-card">
           <div class="product-img-wrap">
             <img src="../Fotos/Productos/pokemon Moltres keyring.png" alt="Llavero Moltres" loading="lazy" />
           </div>
           <div class="product-info">
             <span class="product-game-tag">Pokémon</span>
-            <p class="product-name">Llavero Moltres</p>
-            <p style="color:var(--text-muted);font-size:0.85rem;">Charm de resina artesanal con Moltres, el Pokémon de fuego legendario. Tonos naranjas y rojos con efecto llama en el interior.</p>
-            <p class="product-price">12,99 €</p>
+            <h3 class="product-name">Llavero Moltres</h3>
+            <p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:1rem;">Charm de resina artesanal con Moltres, el Pokémon de fuego legendario. Tonos naranjas y rojos con efecto llama en el interior.</p>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-top:auto;">
+              <span class="product-price">12,99 €</span>
+              <button class="btn btn-primary btn-sm" onclick="addToCart('pk-moltres', 'Llavero Moltres', 12.99, 'Fotos/Productos/pokemon Moltres keyring.png')">
+                Equipar 🛒
+              </button>
+            </div>
           </div>
         </div>
 
       </div>
 
-      <div style="text-align:center;margin-top:3rem;">
+      <div style="text-align:center; margin-top:4rem;">
         <a href="../productos.html" class="btn btn-outline">← Ver todas las colecciones</a>
       </div>
     </div>
   </section>
 
+  <!-- ═══════════════════ FOOTER ═══════════════════ -->
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-brand">
         <img src="../Fotos/GamerCharms.png" alt="GamerCharm" class="footer-logo" />
-        <p>© 2025 GamerCharm. Todos los derechos reservados.</p>
+        <p>© 2026 GamerCharm. Todos los derechos reservados.</p>
       </div>
       <div class="footer-links">
         <a href="../quienes-somos.html">Quiénes Somos</a>
@@ -109,6 +141,7 @@
       </div>
     </div>
   </footer>
+
   <script src="../js/main.js"></script>
 </body>
 </html>
