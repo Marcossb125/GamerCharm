@@ -15,21 +15,8 @@
   <nav class="navbar" id="navbar">
     <div class="nav-container">
       <a href="index.html" class="nav-logo">
-        <img src="Fotos/GamerCharms.png" alt="GamerCharm Logo" class="nav-logo-img" />
-        <span class="nav-logo-text">GamerCharm</span>
+        <img src="Fotos/Productos/logo.png" alt="GamerCharm logo" class="nav-logo-img" />
       </a>
-      
-      <div style="display: flex; align-items: center; gap: 0.5rem;">
-        <!-- Cart trigger (visible on navbar) -->
-        <button class="nav-cart-btn" id="navCartBtn" aria-label="Ver Inventario">
-          🛒
-          <span class="cart-badge" id="navCartBadge" style="display:none">0</span>
-        </button>
-
-        <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
 
       <ul class="nav-menu" id="navMenu">
         <li><a href="quienes-somos.html" class="nav-link">Quiénes Somos</a></li>
@@ -49,31 +36,37 @@
         <li><a href="inversion.html" class="nav-link">Inversión y Financiación</a></li>
         <li><a href="contacto.html" class="nav-link nav-link-cta">Contacto</a></li>
       </ul>
+
+      <div class="nav-actions">
+        <button class="nav-cart-btn" id="navCartBtn" aria-label="Ver Inventario">
+          🛒
+          <span class="cart-badge" id="navCartBadge" style="display:none">0</span>
+        </button>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </nav>
+
 
   <!-- ═══════════════════ HERO ═══════════════════ -->
   <section class="hero" id="hero">
     <div class="hero-particles" id="particles"></div>
     <div class="hero-content">
       <div class="hero-emblem">
-        <div class="emblem-glow"></div>
-        <img src="Fotos/GamerCharms.png" alt="GamerCharm Emblema" class="hero-logo" id="heroLogo" />
-        <div class="hologram-base"></div>
+        <img src="Fotos/Productos/logo.png" alt="GamerCharm Emblema" class="hero-logo" id="heroLogo" />
       </div>
       <h1 class="hero-title">
-        <span class="hero-title-top">Holographic 3D Gear</span>
-        <span class="hero-title-main">Level Up Tu Estilo</span>
+        <span class="hero-title-top">Impresiones 3D</span>
+        <span class="hero-title-main">Eleva tu estilo</span>
       </h1>
       <p class="hero-subtitle">Accesorios gamer premium hechos a mano. Impresión 3D de alta resolución en resina con alma de jugador. Forja tu identidad en el mundo real.</p>
       <div class="hero-buttons">
-        <a href="productos.html" class="btn btn-primary" id="heroCTA">Explorar Botín ⚔️</a>
-        <a href="productos.html#custom-section" class="btn btn-outline">Forjar Custom STL</a>
+        <a href="productos.html" class="btn btn-primary" id="heroCTA">Explorar Tienda ⚔️</a>
+        <a href="productos.html#custom-section" class="btn btn-outline">Pedir Llavero Personalizado</a>
       </div>
-    </div>
-    <div class="hero-scroll-hint">
-      <span>Deslizar</span>
-      <div class="scroll-arrow"></div>
     </div>
   </section>
 
@@ -82,68 +75,29 @@
     <div class="section-container">
       <div class="value-prop-grid">
         <div class="value-prop-text">
-          <span class="section-tag">Idea de Negocio</span>
-          <h2 class="section-title" style="margin-bottom: 1.5rem;">Gaming Passion Meets <span>3D Craft</span></h2>
-          <h3>El puente entre el coleccionismo virtual y la artesanía física</h3>
-          <p>El mercado gaming crece exponencialmente, pero los accesorios físicos suelen ser aburridos, masivos y de plástico barato de importación. En GamerCharm rompemos las reglas estableciendo una micro-fabricación local directa en España.</p>
-          <p>Fusionamos tecnología de impresión 3D de resina fotosensible de grado profesional con post-procesamiento artesanal manual. ¿El resultado? Llaveros y charms ultradetallados con acabados iridiscentes que no encontrarás en ningún otro servidor del planeta.</p>
+          <span class="section-tag">Nuestra Idea</span>
+          <h2 class="section-title" style="margin-bottom: 1.5rem;">Más que un juego, es parte de quiénes somos.</h2>
+          <p>Para millones de personas, los
+videojuegos son una pasión que
+define amistades, crea comunidades
+y forja recuerdos inolvidables.
+Queremos llevar esa conexión más
+allá de la pantalla, dándole a cada
+gamer una forma de expresar su
+identidad.</p>
           <a href="propuesta-valor.html" class="btn btn-outline btn-sm">Ver Proyecto Completo →</a>
-        </div>
-        
-        <div class="comparison-container">
-          <div class="comparison-row">
-            <div class="comp-item bad">
-              <div class="comp-title">❌ Merchandising Masivo Estándar</div>
-              <div class="comp-desc">Materiales plásticos endebles, diseños planos repetitivos, 4 a 8 semanas de envío transoceánico sin posibilidad de personalizar.</div>
-            </div>
-            <div class="comp-item good">
-              <div class="comp-title">⚡ Forja GamerCharm Premium</div>
-              <div class="comp-desc">Resinas de alta tenacidad pintadas a mano, envío express en 24-48h desde España y soporte interactivo para subir tus propios modelos .STL.</div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ═══════════════════ CARACTERÍSTICAS ═══════════════════ -->
-  <section class="features" style="background: rgba(6,7,12,0.9)">
-    <div class="section-container">
-      <div class="section-header">
-        <span class="section-tag cyan">Engine Specs</span>
-        <h2 class="section-title">La Experiencia <span>GamerCharm</span></h2>
-      </div>
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon">🎮</div>
-          <h3>Diseños de Leyenda</h3>
-          <p>Cada llavero está inspirado en las armas, escudos y logos icónicos de los videojuegos más amados del RPG, FPS y Retro.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">✨</div>
-          <h3>Resina Resolutiva</h3>
-          <p>Fabricados con resina fotosensible ABS-Like de alta tenacidad que permite detalles microscópicos y resistencia total a golpes.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">🎨</div>
-          <h3>Pintado a Mano</h3>
-          <p>Post-procesamiento artesanal con imprimación acrílica, aerógrafo, detalles a pincel y laca protectora brillante o mate.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">🚀</div>
-          <h3>Loot Express</h3>
-          <p>Olvídate de esperar meses. Envíos nacionales ultra-rápidos en 24/48 horas en un packaging ecológico y seguro.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- ═══════════════════ UNIVERSOS DE CATÁLOGO ═══════════════════ -->
   <section class="preview-section">
     <div class="section-container">
       <div class="section-header">
         <span class="section-tag">Universos</span>
-        <h2 class="section-title">Elige Tu <span>Loot Pool</span></h2>
+        <h2 class="section-title">Elige tu selección de llaveros</h2>
         <p class="section-subtitle">Explora nuestra colección de charms organizada por tus franquicias favoritas</p>
       </div>
       <div class="universe-grid">
@@ -191,9 +145,9 @@
   <section class="hype-section page-section">
     <div class="section-container">
       <div class="section-header">
-        <span class="section-tag cyan">Hype de la Guild</span>
-        <h2 class="section-title">Comentarios de <span>Nuestra Squad</span></h2>
-        <p class="section-subtitle">Lo que dicen los coleccionistas y jugadores que ya han equipado su loot</p>
+        <span class="section-tag cyan">Euforia de la comunidad</span>
+        <h2 class="section-title">Comentarios de <span>Nuestro equipo</span></h2>
+        <p class="section-subtitle">Lo que dicen los coleccionistas y jugadores que ya han equipado su botín</p>
       </div>
       
       <div class="reviews-grid">
@@ -204,7 +158,7 @@
             <img src="Fotos/GamerCharms.png" alt="Avatar" class="author-avatar" />
             <div class="author-info">
               <h4>@pixel_warrior</h4>
-              <span>Verified Player [Lv. 42]</span>
+              <span>Jugador verificado [Nv. 42]</span>
             </div>
           </div>
         </div>
@@ -216,14 +170,14 @@
             <img src="Fotos/GamerCharms.png" alt="Avatar" class="author-avatar" />
             <div class="author-info">
               <h4>@chrono_collector</h4>
-              <span>Guild Master [Lv. 99]</span>
+              <span>Maestro de equipo [Nv. 99]</span>
             </div>
           </div>
         </div>
         
         <div class="review-card">
           <div class="review-stars">⭐⭐⭐⭐⭐</div>
-          <p class="review-text">"Envío nacional express en 24h. El empaquetado ecológico es un gran acierto y el charm tiene un peso súper premium. Volveré a comprar seguro."</p>
+          <p class="review-text">"Envío nacional exprés en 24h. El empaquetado ecológico es un gran acierto y el charm tiene un peso súper premium. Volveré a comprar seguro."</p>
           <div class="review-author">
             <img src="Fotos/GamerCharms.png" alt="Avatar" class="author-avatar" />
             <div class="author-info">
@@ -262,7 +216,7 @@
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-brand">
-        <img src="Fotos/GamerCharms.png" alt="GamerCharm" class="footer-logo" />
+        <img src="Fotos/Productos/logo.png" alt="GamerCharm" class="footer-logo" />
         <p>© 2026 GamerCharm. Todos los derechos reservados.</p>
       </div>
       <div class="footer-links">

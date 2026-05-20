@@ -13,21 +13,8 @@
   <nav class="navbar" id="navbar">
     <div class="nav-container">
       <a href="index.html" class="nav-logo">
-        <img src="Fotos/GamerCharms.png" alt="GamerCharm Logo" class="nav-logo-img" />
-        <span class="nav-logo-text">GamerCharm</span>
+        <img src="Fotos/Productos/logo.png" alt="GamerCharm logo" class="nav-logo-img" />
       </a>
-      
-      <div style="display: flex; align-items: center; gap: 0.5rem;">
-        <!-- Cart trigger -->
-        <button class="nav-cart-btn" id="navCartBtn" aria-label="Ver Inventario">
-          🛒
-          <span class="cart-badge" id="navCartBadge" style="display:none">0</span>
-        </button>
-
-        <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
 
       <ul class="nav-menu" id="navMenu">
         <li><a href="quienes-somos.html" class="nav-link">Quiénes Somos</a></li>
@@ -47,8 +34,20 @@
         <li><a href="inversion.html" class="nav-link">Inversión y Financiación</a></li>
         <li><a href="contacto.html" class="nav-link nav-link-cta">Contacto</a></li>
       </ul>
+
+      <div class="nav-actions">
+        <button class="nav-cart-btn" id="navCartBtn" aria-label="Ver Inventario">
+          🛒
+          <span class="cart-badge" id="navCartBadge" style="display:none">0</span>
+        </button>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </nav>
+
 
   <div class="breadcrumb"><a href="index.html">Inicio</a><span>›</span>Productos</div>
 
@@ -56,7 +55,7 @@
     <div class="section-container">
       <span class="section-tag">Armería</span>
       <h1>Nuestros Productos</h1>
-      <p>Elige tu universo de loot o forja tus propios diseños en 3D</p>
+      <p>Elige tu universo de botín o forja tus propios diseños en 3D</p>
     </div>
   </section>
 
@@ -104,12 +103,12 @@
     </div>
   </section>
 
-  <!-- ═══════════════════ CUSTOM LOOT CREATOR ═══════════════════ -->
+  <!-- ═══════════════════ CREADOR DE BOTINES PERSONALIZADOS ═══════════════════ -->
   <section class="page-section" id="custom-section" style="background: rgba(6,7,12,0.9); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
     <div class="section-container">
       <div class="section-header">
-        <span class="section-tag cyan">Engine Forge</span>
-        <h2 class="section-title">Custom <span>Loot Creator</span></h2>
+        <span class="section-tag cyan">Forja Creativa</span>
+        <h2 class="section-title">Creador de <span>botines personalizados</span></h2>
         <p class="section-subtitle">¿Tienes un modelo 3D propio? Sube tu archivo .STL y lo imprimiremos con resina premium a tu medida.</p>
       </div>
 
@@ -131,12 +130,12 @@
   <section class="page-section">
     <div class="section-container">
       <div class="content-block spec-tabs-section" style="border: 1px solid var(--border); padding: 2.5rem;">
-        <h2 style="font-family: 'Orbitron'; text-align: center; margin-bottom: 2.5rem; color: var(--text-primary);">💎 GamerCharm Specs & E-commerce Strategy</h2>
+        <h2 style="font-family: 'Orbitron'; text-align: center; margin-bottom: 2.5rem; color: var(--text-primary);">💎 Especificaciones GamerCharm y Estrategia de Comercio</h2>
         
         <div class="tab-buttons-container" style="justify-content: center; margin-bottom: 2rem;">
-          <button class="tab-btn active" data-target="spec-producto">📦 Producto (Specs)</button>
-          <button class="tab-btn" data-target="spec-precio">💰 Precio (D2C)</button>
-          <button class="tab-btn" data-target="spec-promocion">🔥 Promoción (Bundles)</button>
+          <button class="tab-btn active" data-target="spec-producto">📦 Producto (Especificaciones)</button>
+          <button class="tab-btn" data-target="spec-precio">💰 Precio (Directo al consumidor)</button>
+          <button class="tab-btn" data-target="spec-promocion">🔥 Paquetes y lanzamientos</button>
           <button class="tab-btn" data-target="spec-distribucion">🚀 Distribución (24-48h)</button>
         </div>
 
@@ -146,18 +145,18 @@
         </div>
         
         <div class="tab-content" id="spec-precio">
-          <h3 style="font-family:'Orbitron'; color:var(--accent-purple); margin-bottom:0.75rem;">Estrategia Direct-to-Consumer (D2C)</h3>
-          <p>Eliminamos intermediarios y distribuidores externos. Al fabricar localmente en España y vender directamente a través de nuestro e-commerce, reducimos costes operativos. Esta ventaja competitiva nos permite ofrecer charms artesanales premium por tan solo 12,99 € - 19,99 €, manteniendo un margen de contribución bruto de más del 65% ideal para la escalabilidad del proyecto.</p>
+          <h3 style="font-family:'Orbitron'; color:var(--accent-purple); margin-bottom:0.75rem;">Estrategia Directa al Consumidor</h3>
+          <p>Eliminamos intermediarios y distribuidores externos. Al fabricar localmente en España y vender directamente a través de nuestro comercio electrónico, reducimos costes operativos. Esta ventaja competitiva nos permite ofrecer charms artesanales premium por tan solo 12,99 € - 19,99 €, manteniendo un margen de contribución bruto de más del 65% ideal para la escalabilidad del proyecto.</p>
         </div>
         
         <div class="tab-content" id="spec-promocion">
-          <h3 style="font-family:'Orbitron'; color:var(--accent-pink); margin-bottom:0.75rem;">Level Up Bundles & Custom Drops</h3>
-          <p>Fomentamos el valor medio de pedido (AOV) mediante estrategias de gamificación y lotes de producto. Ofrecemos el pack "Full Squad" (3 llaveros con 15% de descuento) y realizamos lanzamientos limitados (Custom Drops) sincronizados con los grandes torneos de E-sports y actualizaciones de videojuegos.</p>
+          <h3 style="font-family:'Orbitron'; color:var(--accent-pink); margin-bottom:0.75rem;">Paquetes épicos y lanzamientos personalizados</h3>
+          <p>Fomentamos el valor medio de pedido mediante estrategias de gamificación y lotes de producto. Ofrecemos el pack "Equipo Completo" (3 llaveros con 15% de descuento) y realizamos lanzamientos limitados personalizados sincronizados con los grandes torneos de E-sports y actualizaciones de videojuegos.</p>
         </div>
         
         <div class="tab-content" id="spec-distribucion">
-          <h3 style="font-family:'Orbitron'; color:#10b981; margin-bottom:0.75rem;">Logística Express & Eco-Packaging</h3>
-          <p>Procesamiento del pedido en 24h. Los envíos se gestionan mediante mensajería Express nacional con entrega garantizada en 24-48 horas. Cada GamerCharm se entrega en un sobre de cartón Kraft acolchado ecológico, sellado con cera de lacre futurista y acompañado de una tarjeta de agradecimiento coleccionable con el lore del charm.</p>
+          <h3 style="font-family:'Orbitron'; color:#10b981; margin-bottom:0.75rem;">Logística Exprés y Embalaje Ecológico</h3>
+          <p>Procesamiento del pedido en 24h. Los envíos se gestionan mediante mensajería exprés nacional con entrega garantizada en 24-48 horas. Cada GamerCharm se entrega en un sobre de cartón Kraft acolchado ecológico, sellado con cera de lacre futurista y acompañado de una tarjeta de agradecimiento coleccionable con el lore del charm.</p>
         </div>
       </div>
     </div>
@@ -167,7 +166,7 @@
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-brand">
-        <img src="Fotos/GamerCharms.png" alt="GamerCharm" class="footer-logo" />
+        <img src="Fotos/Productos/logo.png" alt="GamerCharm" class="footer-logo" />
         <p>© 2026 GamerCharm. Todos los derechos reservados.</p>
       </div>
       <div class="footer-links">

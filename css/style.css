@@ -149,61 +149,65 @@ h1, h2, h3, h4, .font-heading {
 .nav-container {
   max-width: 1280px;
   margin: 0 auto;
-  height: 100%;
+  min-height: var(--nav-h);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 2rem;
+  gap: 1rem;
+  padding: 0 1.5rem;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex-shrink: 0;
 }
 .nav-logo {
   display: flex;
   align-items: center;
-  gap: 0.85rem;
-  font-weight: 900;
-  font-size: 1.5rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+  gap: 0.75rem;
 }
 .nav-logo-img {
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   object-fit: contain;
-  border-radius: 50%;
-  border: 2px solid var(--accent-purple);
-  box-shadow: var(--purple-glow);
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
 }
 .nav-logo-text {
-  background: linear-gradient(135deg, var(--accent-purple), var(--accent-cyan));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-family: 'Orbitron', sans-serif;
+  display: none;
 }
 
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  justify-content: center;
+  gap: 0.9rem;
+  flex: 1;
+  flex-wrap: wrap;
 }
 .nav-link {
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
+  padding: 0.55rem 0.85rem;
+  border-radius: 14px;
   font-size: 0.9rem;
   font-weight: 600;
-  color: var(--text-secondary);
+  color: rgba(255, 255, 255, 0.82);
   transition: var(--transition);
   white-space: nowrap;
 }
 .nav-link:hover, .nav-link.active {
-  color: var(--text-primary);
-  background: rgba(255, 255, 255, 0.05);
-  box-shadow: inset 0 0 10px rgba(0, 240, 255, 0.05);
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: inset 0 0 12px rgba(255, 255, 255, 0.08);
 }
 .nav-link-cta {
   background: linear-gradient(135deg, var(--accent-purple), var(--accent-cyan));
   color: #fff !important;
-  padding: 0.55rem 1.3rem;
-  border-radius: 50px;
+  padding: 0.55rem 1.1rem;
+  border-radius: 999px;
+  font-size: 0.92rem;
   font-weight: 700;
   box-shadow: var(--purple-glow);
 }
@@ -269,13 +273,14 @@ h1, h2, h3, h4, .font-heading {
 /* Nav Icons (Cart) */
 .nav-cart-btn {
   position: relative;
-  background: none;
-  border: none;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 16px;
   cursor: pointer;
-  color: var(--text-primary);
-  font-size: 1.25rem;
-  padding: 0.5rem;
-  margin-left: 0.5rem;
+  color: #ffffff;
+  font-size: 1.2rem;
+  padding: 0.72rem;
+  margin-left: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -316,7 +321,7 @@ h1, h2, h3, h4, .font-heading {
 .nav-toggle span {
   width: 24px;
   height: 2px;
-  background: var(--text-primary);
+  background: rgba(255,255,255,0.92);
   border-radius: 2px;
   transition: var(--transition);
 }
@@ -1570,7 +1575,7 @@ canvas {
 }
 
 /* ════════════════════════════════
-   CONTACT: GUILD APPLICATION FORM (F)
+   CONTACTO: FORMULARIO DE CONTACTO (F)
    ════════════════════════════════ */
 .contact-grid {
   display: grid;
@@ -1579,7 +1584,7 @@ canvas {
   margin-top: 2rem;
 }
 
-.guild-form-container {
+.formulario-equipo {
   background: var(--bg-card);
   border: var(--border-neon);
   box-shadow: var(--shadow), var(--purple-glow);
@@ -1587,7 +1592,7 @@ canvas {
   padding: 2.5rem;
   position: relative;
 }
-.guild-form-container::before {
+.formulario-equipo::before {
   content: "MISSION SPECIFICATION BOARD";
   position: absolute;
   top: -8px;

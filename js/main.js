@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════
-   GAMERCHARM – Interactive E-Commerce & Systems Logic
+   GAMERCHARM – Lógica interactiva de comercio electrónico
    ═══════════════════════════════════════════════ */
 
 // Detect directory nesting for asset path correction
@@ -99,7 +99,7 @@ function initIntersectionObserver() {
     });
   }, { threshold: 0.1 });
 
-  document.querySelectorAll('.feature-card, .universe-card, .product-card, .content-block, .player-card, .guild-form-container, .contact-item, .financial-dashboard').forEach(el => {
+  document.querySelectorAll('.feature-card, .universe-card, .product-card, .content-block, .player-card, .formulario-equipo, .contact-item, .financial-dashboard').forEach(el => {
     el.style.cssText += 'opacity: 0; transform: translateY(30px); transition: opacity 0.65s cubic-bezier(0.25, 0.8, 0.25, 1), transform 0.65s cubic-bezier(0.25, 0.8, 0.25, 1);';
     observer.observe(el);
   });
@@ -178,7 +178,7 @@ function injectCartHTML() {
   drawer.id = 'cartDrawer';
   drawer.innerHTML = `
     <div class="cart-header">
-      <h2>🛒 Tu Inventario <span style="font-size:0.75rem; color:var(--accent-cyan); font-weight:normal; font-family:'Inter'">[E-commerce Active]</span></h2>
+      <h2>🛒 Tu Inventario <span style="font-size:0.75rem; color:var(--accent-cyan); font-weight:normal; font-family:'Inter'">[Comercio electrónico activo]</span></h2>
       <button class="cart-close-btn" id="cartClose">×</button>
     </div>
     
@@ -187,7 +187,7 @@ function injectCartHTML() {
     </div>
     
     <div class="cart-custom-prompt">
-      <h4>🎨 ¿Loot Personalizado?</h4>
+      <h4>🎨 ¿Botín personalizado?</h4>
       <p>Sube tu modelo 3D (.STL) para imprimir tu llavero a medida.</p>
       <div class="stl-upload-zone" id="cartStlZone">
         <span class="scan-line"></span>
@@ -203,7 +203,7 @@ function injectCartHTML() {
         <span id="cartCountLabel">0</span>
       </div>
       <div class="cart-summary-line">
-        <span>Envío (España Express):</span>
+        <span>Envío (España exprés):</span>
         <span style="color:#10b981; font-weight:600;">GRATIS</span>
       </div>
       <div class="cart-summary-line total">
@@ -292,7 +292,7 @@ function updateCartUI() {
   if (!itemsList) return;
 
   if (cart.length === 0) {
-    itemsList.innerHTML = `<div class="cart-empty-message">Tu mochila está vacía.<br><span style="font-size:0.75rem; color:var(--text-muted);">¡Añade productos para llenarla de loot!</span></div>`;
+    itemsList.innerHTML = `<div class="cart-empty-message">Tu mochila está vacía.<br><span style="font-size:0.75rem; color:var(--text-muted);">¡Añade productos para llenarla de botín!</span></div>`;
     if (navBadge) navBadge.style.display = 'none';
     if (floatBadge) floatBadge.style.display = 'none';
     if (floatBtn) floatBtn.style.display = 'none';
@@ -448,11 +448,11 @@ function handleStlFile(file, zone, textElement) {
   setTimeout(() => {
     // Add custom STL product to cart
     addToCart(
-      'stl-custom-' + Date.now(), 
-      `Llavero Custom STL`, 
-      19.99, 
-      'Fotos/GamerCharms.png', 
-      true, 
+      'stl-custom-' + Date.now(),
+      `Llavero Custom STL`,
+      19.99,
+      'Fotos/Productos/logo.png',
+      true,
       file.name
     );
     
