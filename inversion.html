@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Balance de situación, inversión, viabilidad y financiación de GamerCharm." />
+  <meta name="description" content="Balance de situación, inversión y financiación de GamerCharm." />
   <title>Inversión y Financiación – GamerCharm</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -55,7 +55,7 @@
     <div class="section-container">
       <span class="section-tag">Finanzas</span>
       <h1>Inversión y Financiación</h1>
-      <p>Balance de situación, viabilidad y estructura financiera de GamerCharm</p>
+      <p>Balance de situación y estructura financiera de GamerCharm</p>
     </div>
   </section>
 
@@ -63,14 +63,10 @@
   <section class="content-section financial-dashboard">
     <div class="section-container">
 
-      <!-- Interactive Dashboard Tabs -->
-      <div class="tab-buttons-container" style="justify-content: center; margin-bottom: 2.5rem;">
-        <button class="tab-btn active" data-target="balance-tab">📊 Balance</button>
-        <button class="tab-btn" data-target="viabilidad-tab">📈 Viabilidad & Gráficos</button>
-      </div>
 
-      <!-- ══════════════ TAB 1: BALANCE SHEET & FUENTES ══════════════ -->
-      <div class="tab-content active" id="balance-tab">
+
+      <!-- ══════════════ BALANCE SHEET & FUENTES ══════════════ -->
+      <div id="balance-tab">
         
         <!-- KPIs -->
         <div class="three-col" style="margin-bottom:2.5rem;">
@@ -176,70 +172,6 @@
               </ul>
             </div>
           </div>
-        </div>
-
-      </div>
-
-      <!-- ══════════════ TAB 2: VIABILIDAD & CANVAS CHARTS ══════════════ -->
-      <div class="tab-content" id="viabilidad-tab">
-        
-        <!-- Live Neon Charts Grid -->
-        <div class="two-col chart-grid" style="margin-bottom: 2.5rem; gap: 2.5rem;">
-          <div class="content-block chart-card" style="border: 1px solid var(--border); padding: 2rem;">
-            <h3 style="font-family:'Orbitron'; text-align:center; margin-bottom:1.5rem; color:var(--text-primary);">📊 Balance Activo vs Pasivo</h3>
-            <div style="position:relative; width:100%; height:280px;">
-              <canvas id="activoPasivoChart"></canvas>
-            </div>
-          </div>
-          
-          <div class="content-block chart-card" style="border: 1px solid var(--border); padding: 2rem;">
-            <h3 style="font-family:'Orbitron'; text-align:center; margin-bottom:1.5rem; color:var(--text-primary);">🍩 Desglose de Gastos Anuales</h3>
-            <div style="position:relative; width:100%; height:280px;">
-              <canvas id="gastosChart"></canvas>
-            </div>
-          </div>
-        </div>
-
-        <!-- Previsión de gastos -->
-        <div class="content-block" style="border: 1px solid var(--border); padding: 2.5rem;">
-          <h2 style="font-family:'Orbitron'; margin-bottom:1.5rem; color:var(--text-primary);">📉 Previsión de Gastos Primer Año</h2>
-          <div class="table-wrap">
-            <table class="balance-table">
-              <thead>
-                <tr><th>Concepto de Coste</th><th>Período</th><th class="amount">Importe Anual</th></tr>
-              </thead>
-              <tbody>
-                <tr><td>Materias primas (resina, pigmentos, moldes)</td><td>Mensual</td><td class="amount">1.200 €</td></tr>
-                <tr><td>Marketing digital (redes sociales y leads)</td><td>Mensual</td><td class="amount">600 €</td></tr>
-                <tr><td>Embalaje y envíos exprés</td><td>Por pedido</td><td class="amount">480 €</td></tr>
-                <tr><td>Gestión fiscal, contable y asesoría</td><td>Trimestral</td><td class="amount">400 €</td></tr>
-                <tr><td>Gastos de constitución y notaría</td><td>Único</td><td class="amount">350 €</td></tr>
-                <tr><td>Dominio web y herramientas online</td><td>Anual</td><td class="amount">120 €</td></tr>
-                <tr><td>Imprevistos y reservas de caja</td><td>–</td><td class="amount">157 €</td></tr>
-                <tr class="total-row"><td><strong>TOTAL GASTOS ESTIMADOS (AÑO 1)</strong></td><td></td><td class="amount"><strong>3.307 €</strong></td></tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <!-- Previsión ingresos -->
-        <div class="content-block" style="border: 1px solid var(--border); padding: 2.5rem; margin-top: 2rem;">
-          <h2 style="font-family:'Orbitron'; margin-bottom:1.5rem; color:var(--text-primary);">📈 Previsión de Ingresos Primer Año</h2>
-          <div class="table-wrap">
-            <table class="balance-table">
-              <thead>
-                <tr><th>Escenario de Ventas</th><th>Uds. / Mes</th><th>Precio Medio</th><th class="amount">Ingresos Anuales</th></tr>
-              </thead>
-              <tbody>
-                <tr style="color:var(--accent-pink);"><td>🔴 Escenario Pesimista</td><td>50 uds.</td><td>4,00 €</td><td class="amount">2.000 €</td></tr>
-                <tr style="color:var(--accent-cyan); font-weight:600;"><td>🟡 Escenario Realista (Break-Even)</td><td>100 uds.</td><td>4,00 €</td><td class="amount">4.800 €</td></tr>
-                <tr style="color:#10b981;"><td>🟢 Escenario Optimista</td><td>200 uds.</td><td>4,00 €</td><td class="amount">9.600 €</td></tr>
-              </tbody>
-            </table>
-          </div>
-          <p style="margin-top:1.5rem; color:var(--text-muted); font-size:0.92rem; line-height:1.6;">
-            En el escenario <strong style="color:var(--accent-cyan);">realista</strong> (100 llaveros vendidos al mes a un precio medio de 4,00 € debido a las nuevas tarifas de alta demanda de 3,50 € y 5,00 €), GamerCharm genera una facturación de 4.800 €, dando como resultado un beneficio neto (PyG) de <strong style="color:#10b981;">+1.493 €</strong> en el primer año. Este volumen es altamente factible por el precio ultra-barato y permite absorber los costes fijos cómodamente.
-          </p>
         </div>
 
       </div>
